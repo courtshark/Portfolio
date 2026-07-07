@@ -5,7 +5,7 @@ export function DatacenterTrackerPipeline() {
     <svg
       viewBox="0 0 720 300"
       role="img"
-      aria-label="Datacenter Tracker pipeline: social sources (Reddit and StockTwits), SEC EDGAR filings, and news and market data feed Python ingestion collectors, which feed a zero-to-one-hundred signal scoring engine, stored in a SQLite research model, and served through a local API to a web interface showing watchlists, signals, and premarket views."
+      aria-label="AI Infrastructure Research Desk pipeline: social sources (Reddit and StockTwits), SEC EDGAR filings, and news and market data feed Python ingestion collectors, which feed a zero-to-one-hundred signal scoring engine, stored in a SQLite research model, and served through a local API to a web interface showing watchlists, signals, and premarket views."
       className="h-auto w-full"
     >
       <ArrowDefs />

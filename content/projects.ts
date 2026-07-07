@@ -227,12 +227,12 @@ export const projects: Project[] = [
     confidential: true,
   },
   {
-    slug: "datacenter-tracker",
-    title: "Datacenter Tracker",
+    slug: "ai-infrastructure-research-desk",
+    title: "AI Infrastructure Research Desk",
     tagline:
-      "A personal research system mapping the public-company supply chain behind AI data centers — from raw feeds to scored signals.",
+      "A personal research desk covering the full workflow behind AI-infrastructure investing — from supply-chain mapping to scored signals to journaled outcomes.",
     summary:
-      "An end-to-end investment research platform built solo: Python collectors ingest Reddit, StockTwits, SEC EDGAR filings, and market data; a keyword-driven engine scores signals 0–100; a SQLite model maps operator-to-vendor relationships across chips, power, cooling, and colocation; and a local-first web UI serves watchlists and premarket views.",
+      "An end-to-end research platform built solo: Python collectors ingest Reddit, StockTwits, SEC EDGAR filings, and market data; interpretable engines score signals 0–100; a SQLite model maps operator-to-vendor relationships across chips, power, cooling, and colocation; and a local-first web UI carries the whole loop — research feeds discovery, discovery feeds ideas, outcomes feed back into research.",
     context: "Personal project — AI infrastructure research",
     period: "2026 – present",
     categories: ["Data Products", "Data Science", "Automation", "AI"],

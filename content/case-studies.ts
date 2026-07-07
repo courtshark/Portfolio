@@ -920,9 +920,9 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
   /* Datacenter Tracker                                                  */
   /* ------------------------------------------------------------------ */
   {
-    slug: "datacenter-tracker",
+    slug: "ai-infrastructure-research-desk",
     subtitle:
-      "A solo-built research platform that turns scattered market chatter, filings, and news into a structured map of the AI data center supply chain.",
+      "A solo-built research desk that turns scattered market chatter, filings, and news into a structured map of the AI data center supply chain — and a complete research workflow on top of it.",
     sections: [
       {
         id: "executive-summary",
@@ -930,7 +930,11 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
         blocks: [
           {
             type: "p",
-            text: "When AI data center capex rises, which public companies actually benefit — directly, or one layer down the supply chain? Answering that question repeatably requires connecting things that live in completely different places: social sentiment, SEC filings, news flow, price action, and the disclosed (or inferred) relationships between operators and their vendors. Datacenter Tracker is a personal research system I built end-to-end to do exactly that.",
+            text: "When AI data center capex rises, which public companies actually benefit — directly, or one layer down the supply chain? Answering that question repeatably requires connecting things that live in completely different places: social sentiment, SEC filings, news flow, price action, and the disclosed (or inferred) relationships between operators and their vendors. The AI Infrastructure Research Desk is a personal system I built end-to-end to do exactly that.",
+          },
+          {
+            type: "p",
+            text: "The desk covers a five-stage workflow as one connected loop: map the theme (which companies benefit, and where the bottlenecks are), discover names early (scanners and scored signals), generate and vet ideas (AI-backed analysis with human review), follow institutional money (13F flows), and manage and learn (planning, an earnings calendar, and a journal whose outcomes feed back into the research). Nothing in the system is a one-shot stock pick — it's a pipeline where each stage's output is the next stage's input.",
           },
           {
             type: "callout",
