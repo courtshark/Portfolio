@@ -917,6 +917,116 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
   },
 
   /* ------------------------------------------------------------------ */
+  /* Datacenter Tracker                                                  */
+  /* ------------------------------------------------------------------ */
+  {
+    slug: "datacenter-tracker",
+    subtitle:
+      "A solo-built research platform that turns scattered market chatter, filings, and news into a structured map of the AI data center supply chain.",
+    sections: [
+      {
+        id: "executive-summary",
+        title: "Executive Summary",
+        blocks: [
+          {
+            type: "p",
+            text: "When AI data center capex rises, which public companies actually benefit — directly, or one layer down the supply chain? Answering that question repeatably requires connecting things that live in completely different places: social sentiment, SEC filings, news flow, price action, and the disclosed (or inferred) relationships between operators and their vendors. Datacenter Tracker is a personal research system I built end-to-end to do exactly that.",
+          },
+          {
+            type: "callout",
+            tone: "note",
+            title: "Private by design",
+            text: "The application and repository are private because the system supports my personal investment research. This case study covers the architecture and engineering; it contains no positions, tickers, or recommendations — and nothing here is financial advice.",
+          },
+        ],
+      },
+      {
+        id: "problem",
+        title: "The Problem",
+        blocks: [
+          {
+            type: "p",
+            text: "The goal is not to guess the next stock in one step. It's to build a repeatable system that answers structural questions: which companies are direct beneficiaries of data center buildout versus second-order enablers? Which operator-to-vendor relationships are disclosed, which are inferred, and which are still unknown? Where are the bottlenecks — chips, memory, networking, optics, power, cooling, colocation, backup generation?",
+          },
+          {
+            type: "p",
+            text: "Done manually, this research means re-reading the same filings, re-searching the same names, and losing yesterday's insight in a browser tab. It's the same disease as every manual institutional process I've automated — just with SEC filings instead of program webpages.",
+          },
+        ],
+      },
+      {
+        id: "architecture",
+        title: "Architecture",
+        blocks: [
+          {
+            type: "p",
+            text: "The system is a Python + SQLite platform with a clear pipeline: collectors ingest from each source on its own cadence; a scoring engine turns raw text into comparable signals; a relational model stores companies, relationships, and evidence; and a local API serves a web UI with watchlists, signal feeds, and premarket views.",
+          },
+          {
+            type: "diagram",
+            diagram: "datacenter-tracker-pipeline",
+            caption:
+              "Multi-source ingestion converges on a scoring engine and a SQLite research model, served locally.",
+          },
+          {
+            type: "list",
+            items: [
+              "Ingestion: dedicated Python collectors for Reddit, StockTwits, SEC EDGAR filings, company news, and market data — each isolated so one flaky source can't poison the rest.",
+              "Signal scoring: a transparent, keyword-driven engine that scores articles and posts 0–100 across categories like guidance raises, earnings beats, and revenue acceleration. Deliberately interpretable — every score can be traced to the exact phrases that produced it.",
+              "Research model: a SQLite schema mapping companies, operator-to-vendor relationships, and the evidence behind each link, with staging scripts so new research merges in reviewably instead of overwriting.",
+              "Delivery: a local API server and web UI — watchlists, signal feeds, premarket analysis, technical and volume scanners.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "deployment",
+        title: "Deployment Architecture: Local-First on Purpose",
+        blocks: [
+          {
+            type: "p",
+            text: "A partial copy runs on Vercel, but the primary system is deliberately local-first, and the reasoning is the part of this project I'd defend in a design review. The workload is a stateful ingestion loop writing continuously to SQLite on disk — serverless functions have ephemeral filesystems, so truly hosting this means swapping SQLite for an external database, moving collectors into cron jobs or queues, and rebuilding the caching layer. That's a re-architecture, not a deploy.",
+          },
+          {
+            type: "p",
+            text: "For a single-user research tool, that re-architecture buys nothing: locally there are no cold starts, no function timeouts on long multi-step research operations, no function-count ceilings, and no egress bills for hammering my own API. Knowing when not to put something in the cloud is a systems decision too.",
+          },
+        ],
+      },
+      {
+        id: "limitations",
+        title: "Limitations & Responsible Framing",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Signal scores are research indicators, not predictions — the scoring is keyword-based and transparent precisely so it can be doubted intelligently.",
+              "Supply-chain relationships are only as good as their evidence; the model distinguishes disclosed from inferred links rather than presenting both as fact.",
+              "This is a personal research tool. Nothing it produces — and nothing in this case study — is investment advice.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "skills",
+        title: "Skills Demonstrated",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "End-to-end system design: ingestion, scoring, storage, API, and UI built solo",
+              "Python ETL against heterogeneous sources (social APIs, SEC EDGAR, news, market data)",
+              "Interpretable scoring-engine design and SQLite data modeling",
+              "Deployment-architecture judgment: choosing local-first for a stateful workload and knowing what productionizing would require",
+              "AI-assisted development used deliberately, with the architecture and every scoring rule owned and reviewed by me",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  /* ------------------------------------------------------------------ */
   /* Customer Success Technology Operations                              */
   /* ------------------------------------------------------------------ */
   {

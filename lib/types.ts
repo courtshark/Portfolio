@@ -104,7 +104,11 @@ export interface TableBlock {
 export interface DiagramBlock {
   type: "diagram";
   /** Key into the diagram registry in components/diagrams. */
-  diagram: "equity-calculator-flow" | "pslo-pipeline" | "certificate-pipeline";
+  diagram:
+    | "equity-calculator-flow"
+    | "pslo-pipeline"
+    | "certificate-pipeline"
+    | "datacenter-tracker-pipeline";
   caption: string;
 }
 
