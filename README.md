@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Courtney Youngberg — Portfolio
 
-## Getting Started
+A professional portfolio positioning Courtney Youngberg at the intersection of data analytics, business process automation, business/systems analysis, data science, analytics engineering, integration, and AI-assisted operations.
 
-First, run the development server:
+Core brand: **"I turn messy data and manual processes into useful systems."**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The flagship case study is the [Equity Gap Calculator](https://di-calculator.com), a live public application implementing the CCCCO PPG-1 disproportionate-impact methodology.
+
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router, static generation)
+- TypeScript
+- Tailwind CSS 4
+- Vitest for tests
+- Deployable to Vercel with zero configuration
+
+## Architecture
+
+The site is content-driven: every page renders typed data from `content/`, and components own presentation only.
+
+```
+app/                    Routes (App Router)
+  page.tsx              Home
+  projects/             Project index with category/role filtering
+  projects/[slug]/      Case-study detail pages (SSG)
+  about/  resume/  contact/
+  sitemap.ts robots.ts  SEO plumbing
+components/
+  layout/               Header, Footer, Container
+  ui/                   Buttons, tags, section headings
+  project/              Project cards + client-side filter explorer
+  case-study/           Block renderer (paragraphs, code, tables, callouts, diagrams, stats)
+  diagrams/             Inline SVG architecture diagrams + registry
+content/
+  site.ts               Identity, headline, impact stats, home-page copy
+  projects.ts           Project metadata (categories, roles, skills, metrics)
+  case-studies.ts       Full case-study content as typed blocks
+  skills.ts             Skill groups (capability-based, no percentage bars)
+  experience.ts         Resume timeline + education
+lib/
+  types.ts              Content model types
+  filtering.ts          Pure, tested project-filter logic
+  utils.ts
+tests/                  Vitest: filtering behavior + content integrity
+public/resume/          Drop the resume PDF here (see TODO below)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Commands
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev        # local development (http://localhost:3000)
+npm run build      # production build
+npm start          # serve the production build
+npm run lint       # ESLint
+npm run typecheck  # tsc --noEmit
+npm test           # Vitest (filter logic + content integrity)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+The site is fully static — deploy to Vercel by importing the repository (or `npx vercel`). Before going to production:
 
-To learn more about Next.js, take a look at the following resources:
+1. Set the real domain in `content/site.ts` (`site.url`) — it drives metadata, Open Graph, sitemap, and robots.
+2. Search the repo for `TODO` and resolve each item (see below).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Editing content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All copy lives in `content/`. Components never hard-code project or biography text.
 
-## Deploy on Vercel
+### How to add a new project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Add a `Project` entry to `content/projects.ts` (slug, title, tagline, summary, categories, roles, skills; optional metrics/liveUrl). Set `confidential: true` for employer-internal work.
+2. Add a matching `CaseStudy` (same slug) to `content/case-studies.ts`, composed of typed blocks: `p`, `list`, `code`, `table`, `callout`, `diagram`, `stats`.
+3. If the case study needs a diagram, add an SVG component under `components/diagrams/` and register it in `components/diagrams/index.tsx` (plus the union type in `lib/types.ts`).
+4. Run `npm test` — the content-integrity suite verifies slugs match, sections are unique, diagrams exist, and confidential case studies label synthetic examples.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The detail page, project index, filters, sitemap, and static params all pick up the new project automatically.
+
+## Privacy & truthfulness principles
+
+These are enforced by convention and, where possible, by tests (`tests/content.test.ts`):
+
+- **No employer-confidential data.** Case studies for internal work are anonymized; code and data examples are synthetic and visibly labeled "Synthetic example."
+- **No fabricated metrics.** The impact figures on the home page are an approved allowlist checked by a test. Don't add numbers that can't be verified.
+- **No fabricated links.** `repoUrl` stays unset until a verified public repository exists; social links in `content/site.ts` stay empty until confirmed.
+- **No invented dates.** Unverified role dates are empty strings with `// TODO` comments; the UI hides empty periods rather than guessing.
+- **Honest AI attribution.** Where AI coding tools accelerated implementation, the case studies say so.
+
+## Outstanding TODOs
+
+- `content/site.ts` — production domain, LinkedIn/GitHub URLs (verify before adding).
+- `content/experience.ts` — exact dates for pre-2024 roles.
+- `app/resume/page.tsx` — add `public/resume/courtney-youngberg-resume.pdf` and flip `RESUME_PDF_AVAILABLE`.
+- Optional: real screenshots of the Equity Gap Calculator under `public/images/` to complement the flow diagram.
