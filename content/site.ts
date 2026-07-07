@@ -5,8 +5,7 @@ export const site = {
   intro:
     "Senior research analyst with experience across higher education, healthcare technology, customer operations, clinical research, and public safety data. I build analytics, automations, data products, and decision-support tools that bridge technical systems and business needs.",
   email: "courtney.youngberg@gmail.com",
-  // Vercel production domain. TODO: swap for a custom domain if one is added later.
-  url: "https://portfolio-eight-beta-7g89fj2kbh.vercel.app",
+  url: "https://courtneyyoungberg.com",
   // TODO: add verified profile URLs. Do not publish until confirmed.
   linkedin: "",
   github: "",
