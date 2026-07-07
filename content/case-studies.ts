@@ -971,11 +971,55 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
           {
             type: "list",
             items: [
-              "Ingestion: dedicated Python collectors for Reddit, StockTwits, SEC EDGAR filings, company news, and market data — each isolated so one flaky source can't poison the rest.",
-              "Signal scoring: a transparent, keyword-driven engine that scores articles and posts 0–100 across categories like guidance raises, earnings beats, and revenue acceleration. Deliberately interpretable — every score can be traced to the exact phrases that produced it.",
-              "Research model: a SQLite schema mapping companies, operator-to-vendor relationships, and the evidence behind each link, with staging scripts so new research merges in reviewably instead of overwriting.",
-              "Delivery: a local API server and web UI — watchlists, signal feeds, premarket analysis, technical and volume scanners.",
+              "Ingestion: dedicated Python collectors for Reddit, StockTwits, SEC EDGAR filings, company news, and multi-provider market data (with automatic fallback between price feeds) — each isolated so one flaky source can't poison the rest.",
+              "Two interpretable scoring engines: Early Signals (0–100 breakout-potential scores with catalyst timing) and Breakout Watch (news scoring across categories like guidance raises, earnings beats, and revenue acceleration). Both keyword-driven on purpose — every score traces back to the exact phrases that produced it.",
+              "Discovery scanners that find names before headlines do: relative volume versus 20-day average, RSI momentum across the tracked universe, and SEC 8-K full-text scanning for contract awards and design wins.",
+              "Institutional flows: 13F filing tracking via SEC EDGAR — with the caveats modeled honestly (13F data lags roughly 45 days; put positions are flagged as possible hedges rather than directional bets).",
+              "Research model: a SQLite schema mapping companies, operator-to-vendor relationships, and the evidence behind each link.",
+              "Delivery: a local API server and a web UI organized into sixteen task-focused views, from premarket analysis and signal feeds to a supply-chain map and an earnings calendar.",
             ],
+          },
+        ],
+      },
+      {
+        id: "data-governance",
+        title: "Research Rules: Data Governance for One",
+        blocks: [
+          {
+            type: "p",
+            text: "The system runs on written research rules — the same data-governance discipline I'd apply to an institutional dataset, applied to my own research:",
+          },
+          {
+            type: "list",
+            items: [
+              "Separate exposure from valuation. An exposure score estimates how directly a company benefits from data center buildout — it is explicitly not a buy rating.",
+              "Track evidence strength. Every operator-to-vendor relationship is labeled High, Medium, or Low confidence based on how directly it is disclosed.",
+              "Do not invent backup vendors. If a supplier relationship isn't publicly disclosed, it stays marked unknown rather than plausible-sounding.",
+              "Tie every company to a source — official company pages or announcements, not vibes.",
+              "Keep market data physically separate from research notes, so stale prices can't silently contaminate source-backed supply-chain work.",
+            ],
+          },
+          {
+            type: "p",
+            text: "Rule three is my favorite: a research database that refuses to guess is worth more than one that always has an answer.",
+          },
+        ],
+      },
+      {
+        id: "ai-in-the-loop",
+        title: "AI in the Loop, Reviewably",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Model-backed analysis runs (premarket, open-market, and post-market journal reviews) are built with a structured-output API and web search — and degrade gracefully: without credentials, a local tracker-based fallback keeps every view working.",
+              "The UI includes a 'Copy Prompt' control exposing the exact prompt payload behind any analysis, so AI output is inspectable rather than oracular.",
+              "AI-generated research (e.g. a ChatGPT-produced company list) never merges directly: a staging script writes it to a review area where new companies, overlaps, and source quality get checked before anything touches the seed data.",
+            ],
+          },
+          {
+            type: "p",
+            text: "This is the pattern I bring to AI-assisted work generally: use the model for leverage, keep a human review gate in front of the system of record, and make every automated conclusion traceable.",
           },
         ],
       },
