@@ -82,8 +82,9 @@ export const projects: Project[] = [
     tagline:
       "An end-to-end pipeline that found hundreds of students already eligible for certificates they never claimed.",
     summary:
-      "Scraped hundreds of public program and course pages with Python and R, structured the certificate requirements, joined them against student records with SQL, and applied business-rule matching — identifying hundreds of potentially eligible students and feeding an operational outreach effort.",
+      "Scraped 500+ public program and course pages with Python and R, structured the certificate requirements, joined them against student records with SQL, and applied business-rule matching — identifying 200+ potentially eligible students and feeding an operational outreach effort.",
     context: "Retention research, Coastline College",
+    period: "2023 – 2024",
     categories: ["Automation", "Analytics", "Data Science", "Integration"],
     roles: [
       "Data Analyst",
@@ -102,6 +103,10 @@ export const projects: Project[] = [
       "Data matching",
       "Operationalization",
     ],
+    metrics: [
+      { value: "500+", label: "public pages scraped" },
+      { value: "200+", label: "eligible students identified" },
+    ],
     featured: true,
     confidential: true,
   },
@@ -113,6 +118,7 @@ export const projects: Project[] = [
     summary:
       "Built interpretable logistic-regression models to support student success and outreach work. The model reached ROC AUC ≈ 0.719, and held ROC AUC ≈ 0.679 on outreach validation — reported with limitations, not as a magic score.",
     context: "Retention research, Coastline College",
+    period: "2023 – 2024",
     categories: ["Data Science", "Analytics"],
     roles: ["Data Scientist", "Data Analyst", "Senior Data Analyst"],
     skills: [
@@ -228,6 +234,7 @@ export const projects: Project[] = [
     summary:
       "At Tebra (and previously Kareo), owned the reporting and operations tooling a CS org runs on: Snowflake SQL for customer-success metrics, Salesforce and Gainsight administration and reporting, Jira Service Desk workflows, and process improvement in a regulated healthcare-data environment.",
     context: "Tebra / Kareo — healthcare technology",
+    period: "2017 – 2023",
     categories: ["Analytics", "Business Analysis", "Integration", "BI"],
     roles: [
       "Customer Operations / Revenue Operations",

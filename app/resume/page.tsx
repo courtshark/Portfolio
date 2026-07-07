@@ -12,8 +12,7 @@ export const metadata: Metadata = {
     "Courtney Youngberg — Senior Research Analyst. Ten years of experience across higher education analytics, healthcare technology, customer success operations, clinical research, and public safety data.",
 };
 
-// TODO: place a PDF at public/resume/courtney-youngberg-resume.pdf and set this to true.
-const RESUME_PDF_AVAILABLE = false;
+const RESUME_PDF_AVAILABLE = true;
 const RESUME_PDF_PATH = "/resume/courtney-youngberg-resume.pdf";
 
 export default function ResumePage() {

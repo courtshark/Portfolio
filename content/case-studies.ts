@@ -446,7 +446,7 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "Students routinely complete the coursework for certificates they never receive — they simply don't know they qualify, and no system tells them. At Coastline College I built an end-to-end discovery pipeline: scrape hundreds of public program and course pages, structure the certificate requirements, join them against student records in SQL, and apply business-rule matching. It identified hundreds of potentially eligible students and fed a real outreach effort.",
+            text: "Students routinely complete the coursework for certificates they never receive — they simply don't know they qualify, and no system tells them. At Coastline College I built an end-to-end discovery pipeline: scrape 500+ public program and course pages, structure the certificate requirements, join them against student records in SQL, and apply business-rule matching. It identified 200+ potentially eligible students and fed a real outreach effort.",
           },
           {
             type: "callout",
@@ -472,7 +472,7 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "The pipeline had three phases. Discovery: Python and R scrapers collected hundreds of public program and course pages and extracted requirement structures — required courses, unit thresholds, and elective groups. Matching: requirements were normalized into rule sets and joined against student course-completion records in SQL. Action: matched students were scored against the business rules and packaged into lists that student-services staff could actually work for outreach.",
+            text: "The pipeline had three phases. Discovery: Python and R scrapers collected 500+ public program and course pages and extracted requirement structures — required courses, unit thresholds, and elective groups. Matching: requirements were normalized into rule sets and joined against student course-completion records in SQL. Action: matched students were scored against the business rules and packaged into lists that student-services staff could actually work for outreach.",
           },
           {
             type: "diagram",
@@ -516,7 +516,7 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
         blocks: [
           {
             type: "p",
-            text: "Hundreds of potentially eligible students identified and handed to an operational outreach process — analysis that ended in action, not in a report. The project is a compact demonstration of the full arc I care about: ambiguous question → data acquisition → structure → rules → join → validated list → operational use.",
+            text: "200+ potentially eligible students identified and handed to an operational outreach process — analysis that ended in action, not in a report. The project is a compact demonstration of the full arc I care about: ambiguous question → data acquisition → structure → rules → join → validated list → operational use.",
           },
         ],
       },
@@ -540,7 +540,7 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
           {
             type: "list",
             items: [
-              "Python and R web scraping and extraction from hundreds of public pages",
+              "Python and R web scraping and extraction from 500+ public pages",
               "SQL joins and business-rule matching against student records",
               "ETL design, data normalization, and conservative edge-case handling",
               "Operationalization — turning analysis output into a worked outreach process",
@@ -942,7 +942,9 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
           {
             type: "list",
             items: [
-              "Customer-success metrics and reporting built on Snowflake SQL — health, adoption, and operational measures consumed by CS leadership.",
+              "Customer-success metrics and reporting built on Snowflake SQL — account-level customer health, adoption, and operational measures consumed by CS leadership.",
+              "Analysis of declining CSAT scores: identified the key indicators and presented strategic recommendations to executives for policy development.",
+              "Custom reporting for federal subpoenas and search warrants, built with legal and database teams — data work where precision and defensibility are non-negotiable.",
               "Salesforce and Gainsight administration and reporting: the systems where customer reality is recorded, kept useful and trustworthy.",
               "Jira Service Desk workflow design and reporting for operational teams.",
               "Process improvement across the seams — the gaps between systems and teams where customer experience actually degrades.",
