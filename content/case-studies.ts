@@ -71,7 +71,7 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "This is a personal project with an institutional origin story. I built the first version on my own laptop for my own campus's equity work — a tool to make the PPG-1 analysis I was already doing available to colleagues on demand. When the institution chose not to adopt it, I did what the tool deserved: bought a domain, removed the campus branding, generalized it for any California community college practitioner, and released it publicly.",
+            text: "This is a personal project with an institutional origin story. I built the first version on my own laptop to support my own campus's equity work — a tool to make the PPG-1 analysis I was already doing available on demand. The methodology applies to every California community college, not just one, so I bought a domain, generalized the tool beyond a single campus, and released it publicly as a personal project for any practitioner in the system.",
           },
           {
             type: "p",
@@ -255,7 +255,7 @@ export const caseStudies: CaseStudy[] = [
             type: "list",
             items: [
               "Methodology translation is a design problem. Most of the hard decisions were about presentation and edge cases, not formulas.",
-              "A tool built for one audience can be one rebrand away from serving a much bigger one — generalizing beyond a single campus is what turned a declined internal tool into a public product.",
+              "A tool built for one audience can be one rebrand away from serving a much bigger one — generalizing beyond a single campus turned a campus tool into a public product.",
               "Import flexibility is the adoption feature. Every input path added (paste, pre-aggregated, auto-detection) removes a reason to give up.",
               "'Insufficient data' handling is where credibility is won or lost — the honest answer is sometimes 'this group is too small to say'.",
             ],
