@@ -27,6 +27,26 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ink"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ink"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
               <a href={`mailto:${site.email}`} className="hover:text-ink">
                 {site.email}
               </a>

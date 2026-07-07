@@ -6,9 +6,8 @@ export const site = {
     "Senior research analyst with experience across higher education, healthcare technology, customer operations, clinical research, and public safety data. I build analytics, automations, data products, and decision-support tools that bridge technical systems and business needs.",
   email: "courtney.youngberg@gmail.com",
   url: "https://courtneyyoungberg.com",
-  // TODO: add verified profile URLs. Do not publish until confirmed.
-  linkedin: "",
-  github: "",
+  linkedin: "https://www.linkedin.com/in/courtney-youngberg/",
+  github: "https://github.com/courtshark",
   flagshipUrl: "https://di-calculator.com",
   location: "Southern California",
 } as const;

@@ -88,7 +88,7 @@ These are enforced by convention and, where possible, by tests (`tests/content.t
 
 ## Outstanding TODOs
 
-- `content/site.ts` — production domain, LinkedIn/GitHub URLs (verify before adding).
 - `content/experience.ts` — exact dates for pre-2024 roles.
 - `app/resume/page.tsx` — add `public/resume/courtney-youngberg-resume.pdf` and flip `RESUME_PDF_AVAILABLE`.
+- Vercel dashboard — set `www.courtneyyoungberg.com` to redirect to the apex domain (Settings → Domains).
 - Optional: real screenshots of the Equity Gap Calculator under `public/images/` to complement the flow diagram.

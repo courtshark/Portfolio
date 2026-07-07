@@ -55,7 +55,41 @@ export default function ContactPage() {
           </p>
         </div>
 
-        {/* TODO: add LinkedIn / GitHub cards here once site.linkedin / site.github are verified. */}
+        <div className="rounded-xl border border-border bg-surface p-6">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-faint">
+            LinkedIn
+          </h2>
+          <p className="mt-2 text-ink">
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-accent-strong underline underline-offset-4 hover:text-accent"
+            >
+              in/courtney-youngberg
+            </a>
+          </p>
+          <p className="mt-2 text-sm text-muted">
+            Career history, recommendations, and the professional network.
+          </p>
+        </div>
+
+        <div className="rounded-xl border border-border bg-surface p-6">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-faint">GitHub</h2>
+          <p className="mt-2 text-ink">
+            <a
+              href={site.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-accent-strong underline underline-offset-4 hover:text-accent"
+            >
+              @courtshark
+            </a>
+          </p>
+          <p className="mt-2 text-sm text-muted">
+            Public code, including this site&rsquo;s repository.
+          </p>
+        </div>
       </div>
 
       <div className="mt-10 flex flex-wrap gap-3">
