@@ -922,7 +922,7 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
   {
     slug: "ai-infrastructure-research-desk",
     subtitle:
-      "A solo-built research desk that turns scattered market chatter, filings, and news into a structured map of the AI data center supply chain — and a complete research workflow on top of it.",
+      "A solo-built research desk that turns scattered market chatter, filings, and news into a structured view of AI-driven market trends — with a complete research workflow on top, in two voices.",
     sections: [
       {
         id: "executive-summary",
@@ -930,7 +930,7 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
         blocks: [
           {
             type: "p",
-            text: "When AI data center capex rises, which public companies actually benefit — directly, or one layer down the supply chain? Answering that question repeatably requires connecting things that live in completely different places: social sentiment, SEC filings, news flow, price action, and the disclosed (or inferred) relationships between operators and their vendors. The AI Infrastructure Research Desk is a personal system I built end-to-end to do exactly that.",
+            text: "The AI buildout is repricing whole sectors of the market — and understanding it means watching trends, not tickers. The AI Infrastructure Research Desk is a personal system I built end-to-end to track those trends: which themes are accelerating, which companies benefit directly versus one layer down, and what the evidence actually supports. Data centers are the anchor theme, but the lens is deliberately wider — semiconductors, power and grid, networking, memory, cooling, colocation, and space infrastructure, organized into thematic watchlists across 121 tracked companies.",
           },
           {
             type: "p",
@@ -950,7 +950,7 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
         blocks: [
           {
             type: "p",
-            text: "The goal is not to guess the next stock in one step. It's to build a repeatable system that answers structural questions: which companies are direct beneficiaries of data center buildout versus second-order enablers? Which operator-to-vendor relationships are disclosed, which are inferred, and which are still unknown? Where are the bottlenecks — chips, memory, networking, optics, power, cooling, colocation, backup generation?",
+            text: "The goal is not to guess the next stock in one step. It's to build a repeatable system that answers structural questions about the AI trend: which themes are inflecting, which companies are direct beneficiaries versus second-order enablers, which relationships are disclosed versus inferred versus unknown, and where the bottlenecks sit — chips, memory, networking, optics, power, cooling, colocation, backup generation.",
           },
           {
             type: "p",
@@ -1038,6 +1038,20 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
           {
             type: "p",
             text: "For a single-user research tool, that re-architecture buys nothing: locally there are no cold starts, no function timeouts on long multi-step research operations, no function-count ceilings, and no egress bills for hammering my own API. Knowing when not to put something in the cloud is a systems decision too.",
+          },
+        ],
+      },
+      {
+        id: "two-modes",
+        title: "Two Modes, One Desk",
+        blocks: [
+          {
+            type: "p",
+            text: "Financial tools have a voice problem: the interface language of a trading desk — tickers, RSI, invalidation levels — signals 'you don't belong here' to anyone who didn't grow up with it. That gatekeeping is a design choice, so I made a different one. The desk ships with two complete interface registers: Full Desk, the dense professional view, and Soft Mode, which rewrites the entire experience in plain, warm language for people just getting into investing — an audience where women are heavily underrepresented, and not by accident.",
+          },
+          {
+            type: "p",
+            text: "Soft Mode isn't a feature-reduced 'lite' version — same data, same signals, same workflow. What changes is the voice: 'Open Briefing' becomes 'Open calm idea list,' 'Open Retail Pulse' becomes 'Show retail chatter,' and every module explains what it's for and what to click next instead of assuming you already know. It's the same design conviction behind the Equity Gap Calculator's simple and technical result modes: expertise should live in the analysis, not in the vocabulary barrier. Both modes are in the public demo — try the toggle.",
           },
         ],
       },

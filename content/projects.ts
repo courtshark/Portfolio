@@ -230,9 +230,9 @@ export const projects: Project[] = [
     slug: "ai-infrastructure-research-desk",
     title: "AI Infrastructure Research Desk",
     tagline:
-      "A personal research desk covering the full workflow behind AI-infrastructure investing — from supply-chain mapping to scored signals to journaled outcomes.",
+      "A personal research desk for tracking AI-driven market trends — theme mapping, scored signals, journaled outcomes, and an interface with two voices.",
     summary:
-      "An end-to-end research platform built solo: Python collectors ingest Reddit, StockTwits, SEC EDGAR filings, and market data; interpretable engines score signals 0–100; a SQLite model maps operator-to-vendor relationships across chips, power, cooling, and colocation; and a local-first web UI carries the whole loop — research feeds discovery, discovery feeds ideas, outcomes feed back into research.",
+      "An end-to-end research platform built solo: Python collectors ingest Reddit, StockTwits, SEC EDGAR filings, and market data; interpretable engines score signals 0–100; a SQLite model maps how the AI buildout ripples across semiconductors, power, networking, memory, and space; and the whole desk ships in two registers — a jargon-dense Full Desk and a plain-English Soft Mode designed to make investing research less intimidating for newcomers.",
     context: "Personal project — AI infrastructure research",
     period: "2026 – present",
     demoUrl: "https://research-desk-demo.vercel.app",
@@ -252,6 +252,7 @@ export const projects: Project[] = [
       "Signal scoring",
       "Data modeling",
       "Web scraping",
+      "Inclusive UX design",
       "AI-assisted development",
     ],
   },
