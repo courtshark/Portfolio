@@ -89,7 +89,7 @@ export function ProjectExplorer({ projects }: { projects: Project[] }) {
         </ul>
       ) : (
         <p className="mt-8 rounded-xl border border-border bg-surface p-8 text-center text-muted">
-          No projects match this combination — try clearing a filter.
+          No projects match this combination. Try clearing a filter.
         </p>
       )}
     </div>

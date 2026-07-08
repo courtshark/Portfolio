@@ -9,7 +9,7 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Courtney Youngberg — Senior Research Analyst. Ten years of experience across higher education analytics, healthcare technology, customer success operations, clinical research, and public safety data.",
+    "Courtney Youngberg, Senior Research Analyst. Ten years of experience across higher education analytics, healthcare technology, customer success operations, clinical research, and public safety data.",
 };
 
 const RESUME_PDF_AVAILABLE = true;

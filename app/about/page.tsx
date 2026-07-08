@@ -8,7 +8,7 @@ import { skillGroups } from "@/content/skills";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Ten years across public safety data, clinical research, healthcare technology, customer success operations, and higher education analytics — one consistent job: turning messy data and manual processes into useful systems.",
+    "Ten years across public safety data, clinical research, healthcare technology, customer success operations, and higher education analytics, all doing one consistent job: turning messy data and manual processes into useful systems.",
 };
 
 export default function AboutPage() {
@@ -19,27 +19,27 @@ export default function AboutPage() {
           as="h1"
           eyebrow="About"
           title="The same job, five different costumes"
-          lead="My career looks varied on paper — 9-1-1 databases, clinical research, healthcare technology, customer success, higher education. Underneath, it has been one job the whole time."
+          lead="My career looks varied on paper: 9-1-1 databases, clinical research, healthcare technology, customer success, higher education. Underneath, it has been one job the whole time."
         />
 
         <div className="mt-10 max-w-prose space-y-5 leading-relaxed text-ink-soft">
           <p>
             Every environment I&rsquo;ve worked in has had the same shape: important data living in
             messy systems, critical processes running on manual effort, and smart people separated
-            from the answers they need by a technical gap nobody owns. My job — whatever the title
-            said — has been to own that gap.
+            from the answers they need by a technical gap nobody owns. Whatever the title said,
+            my job has been to own that gap.
           </p>
           <p>
             It started with 9-1-1 database work, where I learned what data accuracy actually means:
             not a quality metric, but whether help arrives at the right address. Clinical research
-            added the discipline of protocol — data collected, validated, and documented so that
+            added the discipline of protocol: data collected, validated, and documented so that
             someone else can trust it without trusting you. Those two experiences set a standard for
             data work that has never felt optional since.
           </p>
           <p>
             At Kareo and then Tebra, I moved to the systems side of healthcare technology: leading
             data services, then running the reporting and operations layer for a customer success
-            organization — Snowflake SQL, Salesforce, Gainsight, Jira Service Desk, and the
+            organization. That meant Snowflake SQL, Salesforce, Gainsight, Jira Service Desk, and the
             unglamorous truth that most reporting problems are process problems wearing a costume.
             Working in a regulated, HIPAA-aware environment taught me to treat data handling as an
             ethical practice, not a compliance checkbox.
@@ -49,15 +49,15 @@ export default function AboutPage() {
             models, scraped public program requirements to find students already eligible for
             certificates, and ran compliance data workflows. At Orange Coast College, as a Senior
             Research Analyst, I automate institutional processes, build dashboards leadership
-            actually uses, and translate methodology into decisions. The Equity Gap Calculator — a
-            live public tool implementing the state&rsquo;s disproportionate-impact methodology — is
+            actually uses, and translate methodology into decisions. The Equity Gap Calculator, a
+            live public tool implementing the state&rsquo;s disproportionate-impact methodology, is
             that whole career in miniature: statistics, product thinking, and translation, shipped.
           </p>
           <p>
             The common thread is not an industry or a stack. It&rsquo;s a habit: find the thing that
             is manual, ambiguous, or quietly broken; understand why it&rsquo;s really like that; and
-            replace it with a system people can rely on. I use modern tools to do it — including AI
-            coding tools, used deliberately and reviewed carefully — but the value has never been the
+            replace it with a system people can rely on. I use modern tools to do it, including AI
+            coding tools, used deliberately and reviewed carefully. But the value has never been the
             tool. It&rsquo;s knowing what to build, proving it&rsquo;s right, and getting people to
             use it.
           </p>

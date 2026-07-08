@@ -39,7 +39,7 @@ SUMMARY = (
 EXPERIENCE = [
     ("Senior Research Analyst", "Orange Coast College", "April 2024 – present", [
         "Develop and support institutional effectiveness projects spanning instructional planning, accreditation, compliance reporting, student success, and faculty access to program data.",
-        "Automated PSLO and required-course data collection from 300+ program websites using Python, generating 300+ customized Excel workbooks — saving ~2 months of manual preparation and eliminating temporary staffing needs.",
+        "Automated PSLO and required-course data collection from 300+ program websites using Python, generating 300+ customized Excel workbooks. Cut roughly two months of manual preparation and eliminated the need for temporary staffing.",
         "Analyzed two years of course and program data for ACCJC accreditation review; identified and submitted 70 programs with 50%+ online availability.",
         "Created the Department of Defense XML process translating ~1,600 catalog courses into an annual upload-ready compliance file for military tuition assistance.",
         "Built Power BI dashboards tracking four academic years of Zero Cost Textbook data, plus a Time to Completion dashboard for student progress and program effectiveness.",

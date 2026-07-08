@@ -4,7 +4,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Data & Querying",
     description:
-      "Writing the queries that answer the question — and validating that the answer is right.",
+      "Writing the queries that answer the question, then validating that the answer is right.",
     skills: ["SQL", "Snowflake", "SQL Server", "Oracle / ODS", "ARGOS", "Data validation"],
   },
   {
@@ -24,7 +24,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "BI & Analytics",
     description:
-      "From data model to decision — dashboards and analysis built around real stakeholder questions.",
+      "From data model to decision: dashboards and analysis built around real stakeholder questions.",
     skills: [
       "Power BI",
       "Tableau",
@@ -37,7 +37,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Business Systems",
     description:
-      "The platforms operations teams actually live in — administered, integrated, and reported on.",
+      "The platforms operations teams actually live in, administered, integrated, and reported on.",
     skills: ["Salesforce", "Gainsight", "Jira Service Desk", "ARGOS"],
   },
   {
@@ -56,7 +56,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Cloud & Technical",
     description:
-      "The connective tissue between systems — and enough cloud fluency to design responsibly.",
+      "The connective tissue between systems, plus enough cloud fluency to design responsibly.",
     skills: [
       "AWS fundamentals (Certified Cloud Practitioner)",
       "APIs",

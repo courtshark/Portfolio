@@ -119,7 +119,7 @@ export function BlockRenderer({ block }: { block: Block }) {
               <dd className="font-serif text-2xl font-medium text-accent-strong">{stat.value}</dd>
               <dt className="mt-1 text-xs leading-snug text-muted">
                 {stat.label}
-                {stat.note ? ` — ${stat.note}` : ""}
+                {stat.note ? ` (${stat.note})` : ""}
               </dt>
             </div>
           ))}

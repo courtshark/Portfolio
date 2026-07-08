@@ -17,7 +17,7 @@ export default function ContactPage() {
         as="h1"
         eyebrow="Contact"
         title="Bring me the messy thing"
-        lead="The process everyone hates, the spreadsheet held together with hope, the question nobody can quite answer from the data — that's the conversation I want to have."
+        lead="The process everyone hates, the spreadsheet held together with hope, the question nobody can quite answer from the data: that's the conversation I want to have."
       />
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:max-w-3xl">
@@ -51,7 +51,7 @@ export default function ContactPage() {
             </a>
           </p>
           <p className="mt-2 text-sm text-muted">
-            The Equity Gap Calculator — the fastest way to see how I think about data products.
+            The Equity Gap Calculator is the fastest way to see how I think about data products.
           </p>
         </div>
 

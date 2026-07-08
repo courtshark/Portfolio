@@ -7,7 +7,7 @@ import { projects } from "@/content/projects";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Case studies in data analytics, business process automation, data products, and analytics engineering — from a live equity analysis application to institutional automation pipelines.",
+    "Case studies in data analytics, business process automation, data products, and analytics engineering, from a live equity analysis application to institutional automation pipelines.",
 };
 
 export default function ProjectsPage() {
