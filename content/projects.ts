@@ -235,6 +235,7 @@ export const projects: Project[] = [
       "An end-to-end research platform built solo: Python collectors ingest Reddit, StockTwits, SEC EDGAR filings, and market data; interpretable engines score signals 0–100; a SQLite model maps operator-to-vendor relationships across chips, power, cooling, and colocation; and a local-first web UI carries the whole loop — research feeds discovery, discovery feeds ideas, outcomes feed back into research.",
     context: "Personal project — AI infrastructure research",
     period: "2026 – present",
+    demoUrl: "https://research-desk-demo.vercel.app",
     categories: ["Data Products", "Data Science", "Automation", "AI"],
     roles: [
       "Data Scientist",

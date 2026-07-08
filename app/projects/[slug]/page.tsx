@@ -81,11 +81,16 @@ export default async function ProjectPage({ params }: Props) {
             </div>
           </dl>
 
-          {(project.liveUrl || project.repoUrl) && (
+          {(project.liveUrl || project.demoUrl || project.repoUrl) && (
             <div className="mt-8 flex flex-wrap gap-3">
               {project.liveUrl && (
                 <ButtonLink href={project.liveUrl} external>
                   Launch Live Application
+                </ButtonLink>
+              )}
+              {project.demoUrl && (
+                <ButtonLink href={project.demoUrl} external>
+                  Explore the Static Demo
                 </ButtonLink>
               )}
               {project.repoUrl && (

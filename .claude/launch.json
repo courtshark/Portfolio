@@ -7,6 +7,13 @@
       "runtimeArgs": ["run", "dev"],
       "port": 3000,
       "autoPort": true
+    },
+    {
+      "name": "research-desk-demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "serve", "/Users/courtneyyoungberg/Desktop/research-desk-demo"],
+      "port": 8080,
+      "autoPort": true
     }
   ]
 }
