@@ -53,7 +53,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 max-w-xl leading-relaxed text-muted">
                 {flagshipProject.tagline} Built on the California Community Colleges Chancellor&rsquo;s
-                Office PPG-1 methodology — statistical thresholds, insufficient-data handling, and
+                Office PPG-1 methodology, with statistical thresholds, insufficient-data handling, and
                 gap-closing estimates included, not skipped.
               </p>
               <ul className="mt-6 flex flex-wrap gap-2" aria-label="Key capabilities">
@@ -91,7 +91,7 @@ export default function Home() {
             id="impact-heading"
             eyebrow="Selected impact"
             title="Real numbers from real work"
-            lead="No vanity metrics — each of these is a specific, verifiable outcome from a project on this site."
+            lead="No vanity metrics. Each of these is a specific, verifiable outcome from a project on this site."
           />
           <dl className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
             {impactStats.map((stat) => (
@@ -113,7 +113,7 @@ export default function Home() {
             id="what-heading"
             eyebrow="What I do"
             title="Four verbs, one job"
-            lead="The through-line across ten years and five industries: find the manual, messy, or ambiguous thing — and turn it into a system."
+            lead="The through-line across ten years and five industries: find the manual, messy, or ambiguous thing and turn it into a system."
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {whatIDo.map((item) => (

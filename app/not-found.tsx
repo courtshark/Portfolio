@@ -9,7 +9,7 @@ export default function NotFound() {
         No data found at this address
       </h1>
       <p className="mx-auto mt-4 max-w-md text-muted">
-        The page you&rsquo;re looking for doesn&rsquo;t exist — a rare unvalidated input on this
+        The page you&rsquo;re looking for doesn&rsquo;t exist. Consider it a rare unvalidated input on this
         site.
       </p>
       <div className="mt-8 flex justify-center gap-3">

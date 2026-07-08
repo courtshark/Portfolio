@@ -5,7 +5,7 @@ export function EquityCalculatorFlow() {
     <svg
       viewBox="0 0 720 320"
       role="img"
-      aria-label="Equity Gap Calculator data flow: four import paths — file upload, pasted data, pre-aggregated entry, and column auto-detection — feed a validation and normalization layer, then the PPG-1 calculation engine, which produces simple results, technical results, and export, share, and print outputs."
+      aria-label="Equity Gap Calculator data flow: four import paths (file upload, pasted data, pre-aggregated entry, and column auto-detection) feed a validation and normalization layer, then the PPG-1 calculation engine, which produces simple results, technical results, and export, share, and print outputs."
       className="h-auto w-full"
     >
       <ArrowDefs />
