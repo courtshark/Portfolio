@@ -34,13 +34,18 @@ export default function Home() {
               Explore the Equity Gap Calculator
             </ButtonLink>
           </div>
-          <p className="mt-6 flex items-start gap-2 text-sm text-faint">
-            <span
-              aria-hidden="true"
-              className="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-accent"
-            />
-            {site.openTo}
-          </p>
+          <div className="mt-6 space-y-1 text-sm text-faint">
+            <p className="flex items-start gap-2">
+              <span
+                aria-hidden="true"
+                className="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-accent"
+              />
+              {site.openTo}
+            </p>
+            <p className="pl-4">
+              {site.location} · {site.remote}
+            </p>
+          </div>
         </Container>
       </section>
 
@@ -160,7 +165,7 @@ export default function Home() {
               All projects →
             </Link>
           </div>
-          <ul className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <ul className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             {featuredProjects.map((project) => (
               <li key={project.slug}>
                 <ProjectCard project={project} />

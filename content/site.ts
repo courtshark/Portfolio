@@ -3,7 +3,7 @@ export const site = {
   role: "Data, Automation & Analytics",
   headline: "I turn messy data and manual processes into useful systems.",
   intro:
-    "I work across analytics, automation, and product development, building decision-support applications, predictive models, dashboards, and Python pipelines that replace manual work. My experience spans higher education, healthcare technology, customer operations, clinical research, and public-safety data.",
+    "For over a decade, I've worked across analytics, automation, and product development, building decision-support applications, predictive models, dashboards, and Python pipelines that replace manual work. My experience spans higher education, healthcare technology, customer operations, clinical research, and public-safety data.",
   differentiator:
     "Not just analyzing problems, but building the systems that make better decisions easier.",
   openTo:
@@ -13,7 +13,8 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/courtney-youngberg/",
   github: "https://github.com/courtshark",
   flagshipUrl: "https://di-calculator.com",
-  location: "Southern California",
+  location: "Huntington Beach, CA",
+  remote: "Open to remote",
 } as const;
 
 export const domains = [
