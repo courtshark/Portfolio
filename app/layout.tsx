@@ -21,24 +21,31 @@ const newsreader = Newsreader({
   style: ["normal", "italic"],
 });
 
+const seoTitle = `${site.name} — Analytics, Automation & Data Products`;
+const seoDescription =
+  "Senior analytics and automation professional building decision-support applications, data products, predictive models, dashboards, and Python workflows across higher education, healthcare technology, and operations.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.role}`,
+    default: seoTitle,
     template: `%s — ${site.name}`,
   },
-  description: site.headline + " " + site.intro,
+  description: seoDescription,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: `${site.name} — ${site.role}`,
-    description: site.headline,
+    title: seoTitle,
+    description: seoDescription,
     url: site.url,
   },
   twitter: {
-    card: "summary",
-    title: `${site.name} — ${site.role}`,
-    description: site.headline,
+    card: "summary_large_image",
+    title: seoTitle,
+    description: seoDescription,
   },
 };
 

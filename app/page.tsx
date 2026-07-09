@@ -34,6 +34,13 @@ export default function Home() {
               Explore the Equity Gap Calculator
             </ButtonLink>
           </div>
+          <p className="mt-6 flex items-start gap-2 text-sm text-faint">
+            <span
+              aria-hidden="true"
+              className="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-accent"
+            />
+            {site.openTo}
+          </p>
         </Container>
       </section>
 
@@ -52,9 +59,10 @@ export default function Home() {
                 {flagshipProject.title}
               </h2>
               <p className="mt-4 max-w-xl leading-relaxed text-muted">
-                {flagshipProject.tagline} Built on the California Community Colleges Chancellor&rsquo;s
-                Office PPG-1 methodology, with statistical thresholds, insufficient-data handling, and
-                gap-closing estimates included, not skipped.
+                A live decision-support application that helps higher-education practitioners find and
+                interpret equity gaps without hand-calculating statistical thresholds. Built on the
+                California Community Colleges PPG-1 methodology, with automated thresholding,
+                insufficient-data handling, and gap-closing estimates.
               </p>
               <ul className="mt-6 flex flex-wrap gap-2" aria-label="Key capabilities">
                 {["Live Product", "Statistical Methodology", "Data Import", "Interactive Analysis"].map(
@@ -113,7 +121,7 @@ export default function Home() {
             id="what-heading"
             eyebrow="What I do"
             title="Four verbs, one job"
-            lead="The through-line across ten years and five industries: find the manual, messy, or ambiguous thing and turn it into a system."
+            lead="I work at the intersection of analytics, automation, and operations. Not just analyzing problems, but building the systems that make better decisions easier."
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {whatIDo.map((item) => (
@@ -169,7 +177,7 @@ export default function Home() {
             id="journey-heading"
             eyebrow="Professional journey"
             title="Five domains, one common thread"
-            lead="Cross-domain range is the point, not a detour: every one of these environments involved high-stakes data, messy systems, and stakeholders who needed translation."
+            lead="Five very different environments, one constant: high-stakes data, messy systems, and stakeholders who needed a translator."
           />
           <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {domains.map((domain, i) => (
@@ -191,11 +199,12 @@ export default function Home() {
               id="contact-heading"
               className="font-serif text-3xl font-medium tracking-tight text-ink"
             >
-              Have a messy process or an unanswered data question?
+              Interested in better systems, smarter workflows, and data products people can
+              actually use?
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-muted">
-              That&rsquo;s my favorite kind of email. I&rsquo;m open to conversations about analytics,
-              automation, and data product roles.
+              I&rsquo;m open to conversations about senior analytics, business process automation,
+              data product, and analytics operations opportunities.
             </p>
             <div className="mt-8 flex justify-center gap-3">
               <ButtonLink href="/contact">Get in touch</ButtonLink>

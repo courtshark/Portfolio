@@ -3,7 +3,11 @@ export const site = {
   role: "Data, Automation & Analytics",
   headline: "I turn messy data and manual processes into useful systems.",
   intro:
-    "Senior research analyst with experience across higher education, healthcare technology, customer operations, clinical research, and public safety data. I build analytics, automations, data products, and decision-support tools that bridge technical systems and business needs.",
+    "I work across analytics, automation, and product development, building decision-support applications, predictive models, dashboards, and Python pipelines that replace manual work. My experience spans higher education, healthcare technology, customer operations, clinical research, and public-safety data.",
+  differentiator:
+    "Not just analyzing problems, but building the systems that make better decisions easier.",
+  openTo:
+    "Open to senior analytics, business process automation, data product, and analytics operations roles.",
   email: "courtney.youngberg@gmail.com",
   url: "https://courtneyyoungberg.com",
   linkedin: "https://www.linkedin.com/in/courtney-youngberg/",
@@ -43,26 +47,22 @@ export const domains = [
 export const whatIDo = [
   {
     title: "Analyze",
-    description:
-      "SQL, statistics, dashboards, and modeling. Turning raw records into answers people can act on.",
+    description: "Turn complex data into defensible findings and decisions.",
     items: ["SQL & Snowflake", "Statistical analysis", "Power BI & Tableau", "Predictive modeling"],
   },
   {
     title: "Automate",
-    description:
-      "Python, workflows, and data processing. Replacing months of manual effort with reliable pipelines.",
+    description: "Replace repetitive workflows with reliable, reusable systems.",
     items: ["Python automation", "Web scraping & Selenium", "Excel automation", "Workflow design"],
   },
   {
     title: "Build",
-    description:
-      "Data tools, decision-support products, and integrations that people actually use.",
+    description: "Create usable tools, pipelines, and decision-support products.",
     items: ["Data products", "Decision-support tools", "APIs & XML pipelines", "Dashboards"],
   },
   {
     title: "Translate",
-    description:
-      "Business needs into technical solutions through requirements, documentation, and stakeholder alignment.",
+    description: "Connect stakeholder questions, business processes, and technical work.",
     items: ["Requirements analysis", "Process mapping", "Documentation", "Stakeholder communication"],
   },
 ] as const;
