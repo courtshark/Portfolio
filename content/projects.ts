@@ -144,22 +144,24 @@ export const projects: Project[] = [
     tagline:
       "The data and systems layer behind a healthcare-technology customer success organization.",
     summary:
-      "At Tebra (and previously Kareo), owned the reporting and operations tooling a CS org runs on: Snowflake SQL for customer-success metrics, Salesforce and Gainsight administration and reporting, Jira Service Desk workflows, and process improvement in a regulated healthcare-data environment.",
+      "At Tebra (and previously Kareo), owned the reporting and operations tooling a CS org runs on: Snowflake SQL for customer-success metrics, Salesforce and Gainsight administration, and Jira Service Desk automation, including a ticket state machine that replaced a manual customer-outreach process with automated send, close, and reopen logic, plus a pre-payment data-quality checklist.",
     context: "Tebra / Kareo · healthcare technology",
     period: "2017 – 2023",
-    categories: ["Analytics", "Business Analysis", "Integration", "BI"],
+    categories: ["Automation", "Analytics", "Business Analysis", "Integration"],
     roles: [
       "Customer Operations / Revenue Operations",
+      "Business Process Automation",
       "Business Analyst",
       "Data Analyst",
       "Integration Analyst",
     ],
     skills: [
       "Snowflake SQL",
+      "Jira Service Desk automation",
+      "Workflow automation",
+      "QA & data validation",
       "Salesforce",
       "Gainsight",
-      "Jira Service Desk",
-      "Customer success metrics",
       "Process improvement",
       "Regulated-data awareness",
     ],

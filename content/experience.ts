@@ -56,6 +56,7 @@ export const experience: ExperienceEntry[] = [
     domain: "Healthcare Technology",
     bullets: [
       "Built and customized 4 Jira Service Desk projects with custom workflows and automation, achieving an 85% time-efficiency improvement.",
+      "Automated a manual customer-outreach workflow in Jira Service Desk as a state machine: it sent requests up to three times, auto-closed unanswered tickets, reopened them when customers replied by email, and routed cases between customer-facing staff and analysts. Paired it with a pre-payment data-readiness checklist that set expectations and reduced downstream rework.",
       "Developed a new bulk clinical-document import process that created a new revenue stream for the company.",
       "Programmed advanced SQL scripts automating data mapping and cleaning, achieving a 70% efficiency gain per project.",
     ],

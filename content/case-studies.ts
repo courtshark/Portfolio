@@ -1094,7 +1094,7 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
   {
     slug: "customer-success-operations",
     subtitle:
-      "The reporting and systems layer behind a healthcare-technology customer success organization.",
+      "The reporting, automation, and systems layer behind a healthcare-technology customer success organization.",
     sections: [
       {
         id: "executive-summary",
@@ -1131,6 +1131,30 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
         ],
       },
       {
+        id: "automation-spotlight",
+        title: "Automation Spotlight: Turning a Manual Follow-Up Into a System",
+        blocks: [
+          {
+            type: "p",
+            text: "The clearest example of the operations work: a customer-outreach process that used to run entirely on people remembering to do it. When a ticket needed information or data from a customer before it could move forward, an agent had to send the request, remember to follow up, chase again, and eventually close it by hand. Things fell through the cracks constantly.",
+          },
+          {
+            type: "p",
+            text: "I rebuilt it in Jira Service Desk as an automated state machine. The system sent the outreach on a schedule up to three times; if the customer never responded, it closed the ticket automatically; and if the customer replied by email, it reopened the ticket and routed it back for review. The same automation moved tickets between the customer-facing role and the analysts, so an analyst could weigh in on what the customer's data could and couldn't support while the customer-facing teammate handled the conversation.",
+          },
+          {
+            type: "p",
+            text: "I paired it with a pre-payment data checklist: a short, plain-language guide that helped customers understand their own data and what was and wasn't possible before they paid. It caught data problems early, set honest expectations, and cut the downstream rework that happens when someone buys something their data can't actually support.",
+          },
+          {
+            type: "callout",
+            tone: "note",
+            title: "Why it reads as QA, not just automation",
+            text: "Every ticket now followed one defined path (send, retry, close, reopen) instead of depending on memory, and the checklist put a data-quality gate before money changed hands rather than after. Same instinct as validating a query: define the correct behavior once, then make the system enforce it.",
+          },
+        ],
+      },
+      {
         id: "why-it-matters",
         title: "Why It Matters Here",
         blocks: [
@@ -1148,7 +1172,9 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
             type: "list",
             items: [
               "Snowflake SQL and custom reporting for customer-success metrics",
-              "Salesforce, Gainsight, and Jira Service Desk administration and reporting",
+              "Jira Service Desk workflow automation: ticket state machines, scheduled auto-outreach, auto-close and reopen, and role-based routing",
+              "Data-quality gating and QA checklists that catch problems before they become rework",
+              "Salesforce and Gainsight administration and reporting",
               "Process improvement in a regulated healthcare-technology environment",
               "Technical/non-technical stakeholder translation as a daily practice",
             ],

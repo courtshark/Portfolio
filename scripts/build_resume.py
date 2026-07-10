@@ -60,6 +60,7 @@ EXPERIENCE = [
     ]),
     ("Data Services Technology Lead", "Kareo", "February 2020 – January 2022", [
         "Built and customized 4 Jira Service Desk projects with custom workflows and automation, achieving an 85% time-efficiency improvement.",
+        "Automated a manual customer-outreach workflow in Jira Service Desk as a state machine: sent requests up to three times, auto-closed unanswered tickets, reopened them when customers replied by email, and routed cases between customer-facing staff and analysts; paired with a pre-payment data-readiness checklist that set expectations and reduced rework.",
         "Developed a new bulk clinical-document import process that created a new revenue stream for the company.",
         "Programmed advanced SQL scripts automating data mapping and cleaning, achieving a 70% efficiency gain per project.",
     ]),
