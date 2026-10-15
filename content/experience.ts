@@ -2,7 +2,7 @@ import type { ExperienceEntry } from "@/lib/types";
 
 /**
  * Professional experience, most recent first. Dates and figures verified
- * against Courtney's LinkedIn profile (July 2026).
+ * against Courtney's LinkedIn profile; Antech role added October 2026.
  *
  * Earlier science/service roles (USDA-ARS, Hufbauer Lab, pre-data jobs)
  * are intentionally omitted here to keep the portfolio resume focused on
@@ -10,18 +10,31 @@ import type { ExperienceEntry } from "@/lib/types";
  */
 export const experience: ExperienceEntry[] = [
   {
+    role: "Oracle APEX & SQL QA Tester",
+    org: "Antech Diagnostics",
+    period: "August 2026 – present",
+    domain: "Quality Assurance & Testing",
+    bullets: [
+      "Perform end-to-end functional, regression, and user-acceptance testing for Oracle APEX web applications supporting contracts, pricing, sales, accounting, and customer programs.",
+      "Write SQL queries to build test scenarios, locate the right accounts and contracts, and validate application data across different workflow states.",
+      "Validate complex contract workflows (new agreements, renewals, amendments, approvals, signatures, activations, incentives, rebates, pricing changes, and program eligibility) across U.S. and Canadian markets.",
+      "Test role-based access and permissions across user types, and document defects in Jira with clear reproduction steps, evidence, test data, and expected versus actual results.",
+      "Collaborate with product managers, developers, and business stakeholders to clarify requirements and edge cases, and perform exploratory testing beyond acceptance criteria to catch regressions and usability gaps.",
+    ],
+  },
+  {
     role: "Senior Research Analyst",
     org: "Orange Coast College",
-    period: "April 2024 – present",
+    period: "April 2024 – July 2026",
     domain: "Higher Education Analytics",
     bullets: [
-      "Develop and support institutional effectiveness projects spanning instructional planning, accreditation, compliance reporting, student success, and faculty access to program data.",
+      "Developed and supported institutional effectiveness projects spanning instructional planning, accreditation, compliance reporting, student success, and faculty access to program data.",
       "Automated PSLO and required-course data collection from 300+ program websites using Python, generating 300+ customized Excel workbooks. Cut roughly two months of manual preparation and eliminated the need for temporary staffing.",
       "Analyzed two years of course and program data for ACCJC accreditation review, identifying and submitting 70 programs with more than 50% online availability.",
       "Created the Department of Defense XML file process translating ~1,600 catalog courses into an annual upload-ready compliance file for military tuition assistance.",
       "Built Power BI dashboards tracking four academic years of Zero Cost Textbook data, plus a Time to Completion dashboard for analyzing student progress and program effectiveness.",
       "Built a web-based PPG-1 calculator with data import and auto-calculation features that helps faculty and staff identify equity gaps in student outcomes.",
-      "Create SQL reports, dashboards, and data tools, and support equity-centered data coaching that helps faculty, classified professionals, and managers use outcome data for inquiry and decision-making.",
+      "Created SQL reports, dashboards, and data tools, and supported equity-centered data coaching that helped faculty, classified professionals, and managers use outcome data for inquiry and decision-making.",
     ],
   },
   {

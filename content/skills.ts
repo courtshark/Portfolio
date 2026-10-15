@@ -35,10 +35,23 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
+    title: "QA & Testing",
+    description:
+      "Define the correct behavior once, then confirm the system actually does it.",
+    skills: [
+      "Functional & UAT testing",
+      "Regression testing",
+      "Test case design",
+      "Defect tracking (Jira)",
+      "SQL data validation",
+      "Exploratory testing",
+    ],
+  },
+  {
     title: "Business Systems",
     description:
       "The platforms operations teams actually live in, administered, integrated, and reported on.",
-    skills: ["Salesforce", "Gainsight", "Jira Service Desk", "ARGOS"],
+    skills: ["Oracle APEX", "Salesforce", "Gainsight", "Jira Service Desk", "ARGOS"],
   },
   {
     title: "Methods",
@@ -49,7 +62,6 @@ export const skillGroups: SkillGroup[] = [
       "Process improvement",
       "Stakeholder communication",
       "Data modeling",
-      "QA",
       "Documentation",
     ],
   },

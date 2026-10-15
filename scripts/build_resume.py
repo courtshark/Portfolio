@@ -21,8 +21,8 @@ styles = {
     "contact": ParagraphStyle("contact", fontName="Helvetica", fontSize=8.5, leading=12, textColor=MUTED, spaceBefore=4),
     "summary": ParagraphStyle("summary", fontName="Helvetica", fontSize=9.5, leading=13.5, textColor=INK, spaceBefore=8),
     "h2": ParagraphStyle("h2", fontName="Helvetica-Bold", fontSize=11, leading=14, textColor=ACCENT,
-                          spaceBefore=14, spaceAfter=2),
-    "job": ParagraphStyle("job", fontName="Helvetica-Bold", fontSize=10.5, leading=13, textColor=INK, spaceBefore=8),
+                          spaceBefore=11, spaceAfter=2),
+    "job": ParagraphStyle("job", fontName="Helvetica-Bold", fontSize=10.5, leading=13, textColor=INK, spaceBefore=6),
     "meta": ParagraphStyle("meta", fontName="Helvetica", fontSize=8.5, leading=11, textColor=MUTED, spaceBefore=1),
     "bullet": ParagraphStyle("bullet", fontName="Helvetica", fontSize=9, leading=12.2, textColor=INK,
                               leftIndent=12, bulletIndent=2, spaceBefore=2.5),
@@ -31,20 +31,26 @@ styles = {
 
 HEADLINE = "I turn messy data and manual processes into useful systems."
 SUMMARY = (
-    "Senior research analyst with ~10 years of experience across higher education, healthcare technology, "
-    "customer success operations, clinical research, and public safety data. I build analytics, automations, "
-    "data products, and decision-support tools that bridge technical systems and business needs."
+    "Data and QA professional with over a decade of experience across higher education, healthcare technology, "
+    "customer success operations, clinical research, and public safety data. I build and validate analytics, "
+    "automations, data products, and decision-support tools that bridge technical systems and business needs."
 )
 
 EXPERIENCE = [
-    ("Senior Research Analyst", "Orange Coast College", "April 2024 – present", [
-        "Develop and support institutional effectiveness projects spanning instructional planning, accreditation, compliance reporting, student success, and faculty access to program data.",
+    ("Oracle APEX & SQL QA Tester", "Antech Diagnostics", "August 2026 – present", [
+        "Perform end-to-end functional, regression, and user-acceptance testing for Oracle APEX web applications supporting contracts, pricing, sales, accounting, and customer programs.",
+        "Write SQL queries to build test scenarios, locate the right accounts and contracts, and validate application data across different workflow states.",
+        "Validate complex contract workflows (new agreements, renewals, amendments, approvals, signatures, activations, incentives, rebates, pricing changes, and eligibility) across U.S. and Canadian markets.",
+        "Test role-based access and permissions across user types; document defects in Jira with clear reproduction steps, evidence, test data, and expected versus actual results.",
+        "Collaborate with product managers, developers, and business stakeholders to clarify requirements and edge cases; perform exploratory testing beyond acceptance criteria to catch regressions and usability gaps.",
+    ]),
+    ("Senior Research Analyst", "Orange Coast College", "April 2024 – July 2026", [
+        "Developed and supported institutional effectiveness projects spanning instructional planning, accreditation, compliance reporting, student success, and faculty access to program data.",
         "Automated PSLO and required-course data collection from 300+ program websites using Python, generating 300+ customized Excel workbooks. Cut roughly two months of manual preparation and eliminated the need for temporary staffing.",
         "Analyzed two years of course and program data for ACCJC accreditation review; identified and submitted 70 programs with 50%+ online availability.",
         "Created the Department of Defense XML process translating ~1,600 catalog courses into an annual upload-ready compliance file for military tuition assistance.",
         "Built Power BI dashboards tracking four academic years of Zero Cost Textbook data, plus a Time to Completion dashboard for student progress and program effectiveness.",
-        "Built a web-based PPG-1 equity gap calculator with data import and auto-calculation, helping faculty and staff identify equity gaps in student outcomes.",
-        "Create SQL reports, dashboards, and data tools; support equity-centered data coaching for faculty, classified professionals, and managers.",
+        "Built a web-based PPG-1 disproportionate-impact calculator and created SQL reports, dashboards, and data tools supporting equity-centered decision-making.",
     ]),
     ("Retention Research Analyst", "Coastline College", "June 2023 – April 2024", [
         "Developed and implemented data-driven projects under the guidance of the Dean of Institutional Effectiveness.",
@@ -60,9 +66,8 @@ EXPERIENCE = [
     ]),
     ("Data Services Technology Lead", "Kareo", "February 2020 – January 2022", [
         "Built and customized 4 Jira Service Desk projects with custom workflows and automation, achieving an 85% time-efficiency improvement.",
-        "Automated a manual customer-outreach workflow in Jira Service Desk as a state machine: sent requests up to three times, auto-closed unanswered tickets, reopened them when customers replied by email, and routed cases between customer-facing staff and analysts; paired with a pre-payment data-readiness checklist that set expectations and reduced rework.",
-        "Developed a new bulk clinical-document import process that created a new revenue stream for the company.",
-        "Programmed advanced SQL scripts automating data mapping and cleaning, achieving a 70% efficiency gain per project.",
+        "Automated a manual customer-outreach workflow in Jira as a state machine (timed re-sends, auto-close, reopen on reply, role-based routing), with a pre-payment data-readiness checklist that reduced rework.",
+        "Developed a new bulk clinical-document import process that created a new revenue stream, and wrote SQL scripts automating data mapping and cleaning for a 70% per-project efficiency gain.",
     ]),
     ("Data Services Supervisor", "Kareo", "November 2018 – February 2020", [
         "Led, trained, and managed a team of 7, including 2 offshore employees in Costa Rica.",
@@ -70,16 +75,13 @@ EXPERIENCE = [
         "Partnered with engineering on tooling delivering a 3x increase in upload speed; tested and implemented the CCDA (summary of care) import tool.",
     ]),
     ("Data Integration Specialist", "Kareo", "September 2017 – November 2018", [
-        "Planned and executed data conversion and migration between legacy and target healthcare systems, on time and within budget.",
-        "Extracted, cleansed, transformed, and loaded customer data, verifying accuracy and application performance through structured testing.",
+        "Planned and executed data conversion and migration between legacy and target healthcare systems; cleansed and validated customer data through structured testing.",
     ]),
     ("Associate Data Manager", "iCardiac Technologies", "November 2016 – September 2017", [
-        "Supported data and report-definition requirements for clinical studies; validated data and maintained study documentation.",
-        "Issued and resolved data queries; contributed to standardization of data-management procedures.",
+        "Supported data and report-definition requirements for clinical studies; validated data, maintained study documentation, and resolved data queries.",
     ]),
     ("Implementation Specialist / Data Specialist", "West Safety Services", "September 2014 – November 2016", [
-        "Managed cell tower data in the 9-1-1 wireless database with a 99+% report accuracy rate and 100% on-time deliverables.",
-        "Helped lead process-automation updates across multiple teams; received an excellence award for a large-scale project.",
+        "Managed cell tower data in the 9-1-1 wireless database at 99+% accuracy with 100% on-time delivery; helped lead process-automation updates across multiple teams.",
     ]),
 ]
 
@@ -87,8 +89,9 @@ SKILLS = [
     ("Data & Querying", "SQL, Snowflake, SQL Server, Oracle/ODS, ARGOS, data validation"),
     ("Programming & Automation", "Python, R, pandas, Selenium, openpyxl, web scraping, workflow automation"),
     ("BI & Analytics", "Power BI, Tableau, Excel, statistical analysis, logistic regression, dashboards"),
-    ("Business Systems", "Salesforce, Gainsight, Jira Service Desk"),
-    ("Methods", "requirements analysis, process improvement, stakeholder communication, data modeling, QA, documentation"),
+    ("QA & Testing", "functional, regression & UAT testing, test case design, defect tracking (Jira), SQL data validation, exploratory testing"),
+    ("Business Systems", "Oracle APEX, Salesforce, Gainsight, Jira Service Desk"),
+    ("Methods", "requirements analysis, process improvement, stakeholder communication, data modeling, documentation"),
     ("Cloud & Technical", "AWS fundamentals, APIs, XML, integration concepts, reporting automation"),
 ]
 
