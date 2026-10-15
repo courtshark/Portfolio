@@ -6,8 +6,7 @@ export const site = {
     "For over a decade, I've worked across analytics, automation, and product development, building decision-support applications, predictive models, dashboards, and Python pipelines that replace manual work. My experience spans higher education, healthcare technology, customer operations, clinical research, and public-safety data.",
   differentiator:
     "Not just analyzing problems, but building the systems that make better decisions easier.",
-  openTo:
-    "Open to senior analytics, business process automation, data product, and analytics operations roles.",
+  openTo: "Open to interesting problems and good conversations.",
   email: "courtney.youngberg@gmail.com",
   url: "https://courtneyyoungberg.com",
   linkedin: "https://www.linkedin.com/in/courtney-youngberg/",

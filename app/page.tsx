@@ -42,9 +42,7 @@ export default function Home() {
               />
               {site.openTo}
             </p>
-            <p className="pl-4">
-              {site.location} · {site.remote}
-            </p>
+            <p className="pl-4">{site.location}</p>
           </div>
         </Container>
       </section>
@@ -211,8 +209,8 @@ export default function Home() {
               actually use?
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-muted">
-              I&rsquo;m open to conversations about senior analytics, business process automation,
-              data product, and analytics operations opportunities.
+              I&rsquo;m always up for a good conversation about analytics, automation, and building
+              systems people actually use.
             </p>
             <div className="mt-8 flex justify-center gap-3">
               <ButtonLink href="/contact">Get in touch</ButtonLink>
