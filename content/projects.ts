@@ -11,14 +11,14 @@ import type { Project } from "@/lib/types";
  */
 export const projects: Project[] = [
   {
-    slug: "equity-gap-calculator",
-    title: "Equity Gap Calculator",
+    slug: "di-calculator",
+    title: "DI Calculator",
     tagline:
-      "Translating complex statistical methodology into an accessible decision-support application for higher education practitioners.",
+      "A browser-based tool for PPG-1 disproportionate impact analysis in California Community Colleges, with privacy protections on every exported report.",
     summary:
-      "A live, public web application that implements the California Community Colleges Chancellor's Office PPG-1 methodology, helping practitioners identify student groups succeeding at lower rates than their peers. It handles student-level and pre-aggregated data, statistical thresholds, insufficient-data cases, and gap-closing estimates, with both simple and technical result modes.",
-    context: "Independent public project, informed by institutional research practice",
-    period: "Live product",
+      "A browser-based tool for PPG-1 disproportionate impact analysis in California Community Colleges. It turns the Chancellor's Office methodology into results practitioners can read and researchers can verify, with privacy protections on every exported report and all processing in the browser.",
+    context: "Independent product",
+    period: "Public demo · available for pilots",
     categories: ["Data Products", "Analytics", "Data Science", "AI"],
     roles: [
       "Data Analyst",
@@ -28,16 +28,19 @@ export const projects: Project[] = [
       "Analytics Engineer",
     ],
     skills: [
-      "Statistical methodology",
-      "PPG-1",
+      "PPG-1 methodology",
+      "Statistical thresholds",
+      "Privacy engineering",
       "Data validation",
-      "CSV/Excel import",
+      "React & TypeScript",
       "Data product design",
-      "TypeScript",
       "Visualization",
       "Accessibility",
     ],
     liveUrl: "https://di-calculator.com",
+    liveLabel: "Visit DI Calculator",
+    demoUrl: "https://demo.di-calculator.com",
+    demoLabel: "Try the Public Demo",
     flagship: true,
     featured: true,
   },

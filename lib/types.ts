@@ -54,8 +54,12 @@ export interface Project {
   skills: string[];
   metrics?: Metric[];
   liveUrl?: string;
+  /** Overrides the default "Launch Live Application" button label. */
+  liveLabel?: string;
   /** Public demo deployment (e.g. a sanitized static snapshot). */
   demoUrl?: string;
+  /** Overrides the default "Explore the Static Demo" button label. */
+  demoLabel?: string;
   /** TODO: set when a public repository exists. Never fabricate. */
   repoUrl?: string;
   flagship?: boolean;

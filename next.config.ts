@@ -3,10 +3,15 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
-      // Project renamed after the original URL had already been published.
+      // Projects renamed after the original URLs had already been published.
       {
         source: "/projects/datacenter-tracker",
         destination: "/projects/ai-infrastructure-research-desk",
+        permanent: true,
+      },
+      {
+        source: "/projects/equity-gap-calculator",
+        destination: "/projects/di-calculator",
         permanent: true,
       },
     ];

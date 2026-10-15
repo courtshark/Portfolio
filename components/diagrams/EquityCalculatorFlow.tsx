@@ -3,48 +3,60 @@ import { Arrow, ArrowDefs, DiagramBox } from "./primitives";
 export function EquityCalculatorFlow() {
   return (
     <svg
-      viewBox="0 0 720 320"
+      viewBox="0 0 720 300"
       role="img"
-      aria-label="Equity Gap Calculator data flow: four import paths (file upload, pasted data, pre-aggregated entry, and column auto-detection) feed a validation and normalization layer, then the PPG-1 calculation engine, which produces simple results, technical results, and export, share, and print outputs."
+      aria-label="DI Calculator data flow: three import paths (CSV or .xlsx upload, pasted Excel data, and pre-aggregated counts) feed column mapping and validation, then the PPG-1 engine (margin of error, n ≤ 10, and gap to close), producing simple and technical results, then a privacy plan (small-group and complementary suppression with a reconstruction check) before CSV and print output. In the public demo, import is disabled and only synthetic sample data is used."
       className="h-auto w-full"
     >
       <ArrowDefs />
 
       {/* Import paths */}
-      <DiagramBox x={10} y={16} w={160} h={48} label="File upload" sublabel="CSV · .xlsx · .xls" />
-      <DiagramBox x={10} y={92} w={160} h={48} label="Pasted data" sublabel="Excel / table paste" />
-      <DiagramBox x={10} y={168} w={160} h={48} label="Pre-aggregated" sublabel="group counts" />
-      <DiagramBox x={10} y={244} w={160} h={48} label="Auto-detection" sublabel="header mapping" />
+      <DiagramBox x={8} y={18} w={140} h={44} label="CSV · .xlsx" sublabel="file upload" />
+      <DiagramBox x={8} y={76} w={140} h={44} label="Pasted data" sublabel="from Excel" />
+      <DiagramBox x={8} y={134} w={140} h={44} label="Pre-aggregated" sublabel="group counts" />
 
-      <Arrow x1={170} y1={40} x2={218} y2={132} />
-      <Arrow x1={170} y1={116} x2={218} y2={148} />
-      <Arrow x1={170} y1={192} x2={218} y2={162} />
-      <Arrow x1={170} y1={268} x2={218} y2={178} />
+      <Arrow x1={148} y1={40} x2={170} y2={88} />
+      <Arrow x1={148} y1={98} x2={170} y2={98} />
+      <Arrow x1={148} y1={156} x2={170} y2={108} />
 
-      {/* Validation */}
-      <DiagramBox x={220} y={124} w={145} h={62} label="Validation &" sublabel="normalization" tone="soft" />
-
-      <Arrow x1={365} y1={155} x2={398} y2={155} />
-
-      {/* Engine */}
+      {/* Mapping & validation */}
       <DiagramBox
-        x={400}
-        y={112}
-        w={150}
-        h={86}
+        x={172}
+        y={66}
+        w={142}
+        h={62}
+        label="Validation"
+        sublabel="mapping · filters · dimensions"
+        tone="soft"
+      />
+      <Arrow x1={314} y1={97} x2={340} y2={97} />
+
+      {/* PPG-1 engine */}
+      <DiagramBox
+        x={342}
+        y={62}
+        w={152}
+        h={70}
         label="PPG-1 engine"
-        sublabel="thresholds · min-n · gaps"
+        sublabel="MoE · n ≤ 10 · gap to close"
         tone="accent"
       />
+      <Arrow x1={494} y1={97} x2={520} y2={95} />
 
-      <Arrow x1={550} y1={135} x2={568} y2={58} />
-      <Arrow x1={550} y1={155} x2={568} y2={155} />
-      <Arrow x1={550} y1={175} x2={568} y2={252} />
-
-      {/* Outputs */}
-      <DiagramBox x={570} y={32} w={140} h={52} label="Simple results" sublabel="plain language" />
-      <DiagramBox x={570} y={129} w={140} h={52} label="Technical results" sublabel="rates · gaps · n" />
-      <DiagramBox x={570} y={226} w={140} h={52} label="Export · Print" sublabel="Excel · share" />
+      {/* Results → privacy plan → export (vertical tail) */}
+      <DiagramBox x={522} y={66} w={150} h={58} label="Results" sublabel="simple / technical" />
+      <Arrow x1={597} y1={124} x2={597} y2={150} />
+      <DiagramBox
+        x={522}
+        y={150}
+        w={150}
+        h={58}
+        label="Privacy plan"
+        sublabel="suppression · recon check"
+        tone="soft"
+      />
+      <Arrow x1={597} y1={208} x2={597} y2={234} />
+      <DiagramBox x={522} y={234} w={150} h={50} label="CSV · Print" sublabel="privacy applied" />
     </svg>
   );
 }

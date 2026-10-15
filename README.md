@@ -4,7 +4,7 @@ A professional portfolio positioning Courtney Youngberg at the intersection of d
 
 Core brand: **"I turn messy data and manual processes into useful systems."**
 
-The flagship case study is the [Equity Gap Calculator](https://di-calculator.com), a live public application implementing the CCCCO PPG-1 disproportionate-impact methodology.
+The flagship case study is [DI Calculator](https://di-calculator.com), a browser-based tool implementing the CCCCO PPG-1 disproportionate-impact methodology, with a public demo (synthetic data) at demo.di-calculator.com.
 
 ## Stack
 
@@ -89,5 +89,5 @@ These are enforced by convention and, where possible, by tests (`tests/content.t
 ## Outstanding TODOs
 
 - Vercel dashboard — set `www.courtneyyoungberg.com` to redirect to the apex domain (Settings → Domains).
-- Optional: real screenshots of the Equity Gap Calculator under `public/images/` to complement the flow diagram.
+- Optional: real screenshots of DI Calculator under `public/images/` to complement the flow diagram.
 - Regenerate the resume PDF when experience changes: `python3 scripts/build_resume.py` (requires `pip install reportlab`). Keep `scripts/build_resume.py` in sync with `content/experience.ts`.

@@ -51,7 +51,7 @@ export default function ContactPage() {
             </a>
           </p>
           <p className="mt-2 text-sm text-muted">
-            The Equity Gap Calculator is the fastest way to see how I think about data products.
+            DI Calculator is the fastest way to see how I think about data products.
           </p>
         </div>
 

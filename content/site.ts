@@ -13,6 +13,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/courtney-youngberg/",
   github: "https://github.com/courtshark",
   flagshipUrl: "https://di-calculator.com",
+  demoUrl: "https://demo.di-calculator.com",
   location: "Huntington Beach, CA",
   remote: "Open to remote",
 } as const;

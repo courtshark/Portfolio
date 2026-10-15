@@ -12,12 +12,12 @@ import type { CaseStudy } from "@/lib/types";
  */
 export const caseStudies: CaseStudy[] = [
   /* ------------------------------------------------------------------ */
-  /* Flagship: Equity Gap Calculator                                     */
+  /* Flagship: DI Calculator                                             */
   /* ------------------------------------------------------------------ */
   {
-    slug: "equity-gap-calculator",
+    slug: "di-calculator",
     subtitle:
-      "Translating complex statistical methodology into an accessible decision-support application for higher education practitioners.",
+      "Translating the California Community Colleges PPG-1 methodology into a privacy-conscious, browser-based analysis tool.",
     sections: [
       {
         id: "executive-summary",
@@ -25,11 +25,11 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "The Equity Gap Calculator is a live, public web application that answers one question well: which student groups are succeeding at lower rates than their peers, and by how much? It implements the PPG-1 (percentage point gap) methodology from the California Community Colleges Chancellor's Office, the state's official approach to identifying disproportionate impact, and wraps it in a product a practitioner can use in minutes with a CSV export or a pasted Excel table.",
+            text: "DI Calculator answers one question well: which student groups are achieving an outcome at a different rate than everyone else, beyond the margin of error? It implements the PPG-1 method published by the California Community Colleges Chancellor's Office and reports each group using the four official states: Disproportionately Lower, No Disproportionate Impact, Disproportionately Higher, or Insufficient Data. It runs entirely in the browser, and every exported or printed report applies small-group and complementary suppression. A public demo with synthetic data is at demo.di-calculator.com.",
           },
           {
             type: "p",
-            text: "This is a methodology-translation project as much as a software project. The statistical rules already existed in policy documents: subgroup versus all-other comparisons, margin-of-error thresholds, minimum-n handling. The work was turning them into a tool that produces defensible answers for people who are not statisticians, without dumbing the method down.",
+            text: "This is a methodology-translation project as much as a software project. The statistical rules already existed in public policy documents: subgroup versus all-other comparisons, margin-of-error thresholds, minimum-n handling. The work was turning them into a tool that produces defensible answers for people who are not statisticians, without dumbing the method down.",
           },
         ],
       },
@@ -71,11 +71,11 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "This is a personal project with an institutional origin story. I built the first version on my own laptop to support my own campus's equity work, as a way to make the PPG-1 analysis I was already doing available on demand. Since the methodology applies to every California community college rather than just one, I bought a domain, generalized the tool beyond a single campus, and released it publicly as a personal project for any practitioner in the system.",
+            text: "DI Calculator is an independent product, written from the public CCCCO PPG-1 documentation. It ships with synthetic sample data only, and it links to the Chancellor's Office methodology notes so anyone can check the approach against the source. A public demo shows the full workflow with synthetic data; institutions can arrange pilots for use with their own data.",
           },
           {
             type: "p",
-            text: "It uses only the public PPG-1 methodology and the user's own data. No institutional data ships with the tool, and it links back to the Chancellor's Office methodology notes so users can verify the approach against the source.",
+            text: "It is independently developed and not affiliated with or endorsed by the California Community Colleges Chancellor's Office or any college or district, and it does not reproduce every SEA/SEP reporting procedure. It is a tool for running the PPG-1 analysis, not an official reporting or submission system.",
           },
         ],
       },
@@ -116,17 +116,21 @@ export const caseStudies: CaseStudy[] = [
             type: "table",
             caption: "Illustrative PPG-1 output (synthetic data)",
             synthetic: true,
-            headers: ["Group", "n", "Success rate", "All-other rate", "PPG-1", "Status"],
+            headers: ["Group", "n", "Rate", "All-other rate", "PPG-1", "Status"],
             rows: [
-              ["Group A", "412", "71.4%", "69.8%", "+1.6 pts", "On track or above"],
-              ["Group B", "138", "61.1%", "70.9%", "−9.8 pts", "Gap detected"],
-              ["Group C", "57", "66.7%", "70.2%", "−3.5 pts", "Below average, within threshold"],
-              ["Group D", "8", "—", "—", "—", "Insufficient data (n ≤ 10)"],
+              ["Group A", "412", "71.4%", "69.8%", "+1.6 pts", "No Disproportionate Impact"],
+              ["Group B", "138", "61.1%", "70.9%", "−9.8 pts", "Disproportionately Lower"],
+              ["Group C", "57", "66.7%", "70.2%", "−3.5 pts", "No Disproportionate Impact (within margin of error)"],
+              ["Group D", "8", "—", "—", "—", "Insufficient Data (n ≤ 10)"],
             ],
           },
           {
             type: "p",
-            text: "The tool also computes a gap-closing estimate for each flagged group: the number of additional successful outcomes required to close the gap. This turns an abstract percentage into a concrete, discussable target. 'About 14 more students succeeding' is something a program can plan around.",
+            text: "Synthetic data. Group B's margin-of-error threshold at n = 138 is about ±8.3 points, so −9.8 exceeds it and the group is flagged as Disproportionately Lower. Group C's threshold is about ±13 points, so −3.5 stays within the margin and is not flagged.",
+          },
+          {
+            type: "p",
+            text: "The tool also computes a students-to-close-the-gap estimate for each group with disproportionate impact: the number of additional successful outcomes that would bring the group in line. This turns an abstract percentage into a concrete, discussable target. 'About 14 more students succeeding' is something a program can plan around.",
           },
         ],
       },
@@ -137,11 +141,12 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "list",
             items: [
-              "Simple and technical result modes, not one compromise view. Practitioners get plain language ('Gap detected'); researchers get rates, thresholds, and counts.",
-              "Insufficient data is a first-class result state, not an error. Small groups are reported as unreliable rather than silently dropped or falsely flagged.",
-              "Percentage and count toggles, because equity conversations need both 'how big is the gap' and 'how many students is that'.",
-              "Export, share, and print built in. This analysis is headed for a meeting, a plan, or a report, not the screen.",
-              "Links to the official Chancellor's Office methodology notes, so the tool's authority is checkable rather than asserted.",
+              "Only the four official states. No 'below average' bucket that sounds like a finding but isn't one. Simple mode uses plainer wording for the same four states.",
+              "Simple and Technical modes. Plain language first; rates, margins of error, counts, and the full arithmetic one click away.",
+              "Insufficient Data is a real result, applied consistently in every view.",
+              "Privacy on published output. The on-screen workbook is the analyst's private view. CSV and print output apply small-group and complementary suppression, and are withheld when suppressed values could be reconstructed from related totals.",
+              "Extensions are labeled as extensions. Intersectional comparisons and year-over-year trend arrows are marked as DI Calculator aids, not part of the official PPG-1 procedure.",
+              "A public demo, not a public upload. The demo uses synthetic data with import disabled, so no one is invited to put student records into a public site.",
             ],
           },
         ],
@@ -152,22 +157,23 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "Real adoption depends on meeting data where it lives. The tool accepts four input paths that converge on one normalized internal representation before any analysis runs:",
+            text: "The product meets data where it lives, then converges every path onto one normalized, validated representation before any analysis runs. In the public demo, import is disabled and only synthetic sample data is used.",
           },
           {
             type: "list",
             items: [
-              "Student-level file upload: CSV, .xlsx, or .xls exports straight from institutional systems.",
-              "Pasted data: a table copied from Excel or a report and pasted directly into the app.",
-              "Pre-aggregated entry: group-by-group counts for users who only have summary tables.",
-              "Automatic column detection: headers are matched to expected fields (demographics, outcomes, optional fields like course/section, retention, discipline, subject, and education goal) with the user confirming the mapping.",
+              "File upload: CSV and .xlsx exports from institutional systems.",
+              "Pasted data: a table copied from Excel or a report and pasted directly in.",
+              "Pre-aggregated counts: group-by-group totals for users who only have summary tables.",
+              "Sample data: synthetic datasets for trying the full workflow without real records.",
+              "Column mapping and validation: headers are matched to expected fields, including custom categorical dimensions, with the user confirming the mapping.",
             ],
           },
           {
             type: "diagram",
             diagram: "equity-calculator-flow",
             caption:
-              "Import paths converge on a validated, normalized dataset before the PPG-1 engine runs.",
+              "Import paths converge on validated, normalized records, then run through the PPG-1 engine and a privacy plan before anything is exported.",
           },
         ],
       },
@@ -186,19 +192,21 @@ export const caseStudies: CaseStudy[] = [
               "Category normalization: demographic labels mapped to consistent groups before comparison.",
               "Minimum-n enforcement: groups at or below the reliability threshold (n ≤ 10) are reported as 'insufficient data' and excluded from flagging.",
               "Aggregation consistency: pre-aggregated inputs are checked for internally consistent counts (successes cannot exceed attempts).",
+              "Published-output suppression: before any CSV or print export, small-group and complementary suppression is applied, and a reconstruction check confirms suppressed values can't be recovered from related totals. If it can't confirm that, the output is withheld rather than published.",
             ],
           },
           {
             type: "code",
             language: "ts",
-            label: "Threshold logic (illustrative)",
+            label: "Classification logic (illustrative)",
             synthetic: true,
-            code: `function classify(group: GroupResult, threshold: number): Status {
-  if (group.n <= MIN_RELIABLE_N) return "insufficient-data";
-  const ppg1 = group.successRate - group.allOtherRate; // percentage points
-  if (ppg1 <= -threshold) return "gap-detected";      // beyond margin of error
-  if (ppg1 < 0) return "below-average";               // within margin of error
-  return "on-track";
+            code: `// Illustrative (synthetic example)
+function classify(group: GroupResult, moe: number): Status {
+  if (group.n <= 10) return "insufficient-data";
+  const ppg1 = group.rate - group.allOtherRate; // percentage points
+  if (ppg1 <= -moe) return "disproportionately-lower";
+  if (ppg1 >= moe) return "disproportionately-higher";
+  return "no-disproportionate-impact";
 }`,
           },
         ],
@@ -209,7 +217,7 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "The app is organized as a three-step workflow: bring data in, run the calculation, review results. Demographic breakdowns cover Race/Ethnicity, Gender, and Age. Results pair a success-rate visualization with per-group status (gap detected, below average, on track or above, or insufficient data), and from there users can export to Excel, print, or share.",
+            text: "Bring data in by uploading, pasting, entering counts, or using a sample. Then choose an outcome and a dimension and review results. Dimensions include Race/Ethnicity, Gender, Age, Discipline, Course, and Education Goal, plus any categorical field in the data. Filters, category changes, intersectional comparisons, and Academic Year or Term views recalculate live. Results pair a status matrix with a PPG-1 chart showing each group's margin of error.",
           },
         ],
       },
@@ -219,7 +227,7 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "The UX principle throughout: the tool should feel like a knowledgeable colleague, not a statistics exam. Plain-language status labels lead, and precise figures are one toggle away. Error states explain what to fix, not just what failed. The riskiest misreading would be treating a noisy small-group result as a finding, so 'insufficient data' gets its own prominent, explained status.",
+            text: "The UX principle throughout: the tool should feel like a knowledgeable colleague, not a statistics exam. Plain-language status labels lead, and precise figures are one toggle away. Error states explain what to fix, not just what failed. The riskiest misreading would be treating a noisy small-group result as a finding, so Insufficient Data gets its own prominent, explained state, and the four official states carry no 'almost' bucket that could be mistaken for a result.",
           },
         ],
       },
@@ -229,11 +237,11 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "A client-side web application: parsing, validation, and the PPG-1 engine run in the browser. That is both a privacy stance (student-level records never leave the user's machine) and an operational one (no data-retention surface to secure). File parsing handles CSV and Excel formats, and the calculation engine is isolated from the UI so the statistical logic is testable on its own.",
+            text: "A client-side application built with React 19, TypeScript in strict mode, Vite, and Zustand for state, with ExcelJS handling .xlsx parsing. Everything runs in the browser: parsing, validation, the PPG-1 engine, and the privacy plan. Student data is never uploaded to a server, which is both a privacy stance and an operational one, since there is no data-retention surface to secure. The calculation and privacy logic are isolated from the UI and covered by 358 automated tests, so the statistical behavior can be verified on its own.",
           },
           {
             type: "p",
-            text: "I used AI coding tools to move faster on implementation scaffolding, and treated their output the way I'd treat a junior developer's: reviewed, tested, and corrected. The methodology layer, meaning what gets computed, when a group is flagged, and how edge cases resolve, was specified and verified by hand against the published methodology.",
+            text: "I used AI coding tools to move faster on implementation, and treated their output the way I'd treat a junior developer's: reviewed, tested, and corrected. The methodology layer, meaning what gets computed, when a group is flagged, and how edge cases resolve, was specified and verified by hand against the published PPG-1 documentation. DI Calculator is a clean-room implementation written from those public documents.",
           },
         ],
       },
@@ -243,7 +251,7 @@ export const caseStudies: CaseStudy[] = [
         blocks: [
           {
             type: "p",
-            text: "A live, public tool at di-calculator.com that performs the state's official disproportionate-impact calculation for anyone with a data export. No request queue, no spreadsheet template, no skipped error thresholds. It stands as the clearest public demonstration of what I do: take a method buried in policy documents and manual process, and turn it into a system people can actually use.",
+            text: "DI Calculator is live at di-calculator.com, with a public demo at demo.di-calculator.com that uses synthetic data. It performs the PPG-1 disproportionate impact calculation in the browser, applies privacy protections to every published report, and is backed by 358 automated tests. Colleges and districts can contact me about pilots and institutional use. It stands as the clearest public demonstration of what I do: take a method buried in policy documents and manual process, and turn it into a system people can actually use.",
           },
         ],
       },
@@ -255,9 +263,9 @@ export const caseStudies: CaseStudy[] = [
             type: "list",
             items: [
               "Methodology translation is a design problem. Most of the hard decisions were about presentation and edge cases, not formulas.",
-              "A tool built for one audience can be one rebrand away from serving a much bigger one. Generalizing beyond a single campus turned a campus tool into a public product.",
-              "Import flexibility is the adoption feature. Every input path added (paste, pre-aggregated, auto-detection) removes a reason to give up.",
-              "'Insufficient data' handling is where credibility is won or lost. Sometimes the honest answer is 'this group is too small to say'.",
+              "Privacy belongs in the output path, not just the intake. Suppressing small groups on screen is easy; the harder, more important work is making sure a published report can't be reverse-engineered from its own subtotals, and failing closed when it can't be confirmed.",
+              "Import flexibility is the adoption feature. Every input path (upload, paste, pre-aggregated, sample) removes a reason to give up before the first result.",
+              "Insufficient Data handling is where credibility is won or lost. Sometimes the honest answer is 'this group is too small to say', and the tool has to say exactly that rather than guess.",
             ],
           },
         ],
@@ -269,10 +277,10 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "list",
             items: [
-              "Additional methodologies (e.g. proportionality index, 80% rule) behind the same import and results experience.",
-              "Cohort-over-time comparisons to track whether identified gaps are closing.",
+              "Excel workbook export using the same privacy protections.",
               "Saved analysis configurations for recurring program-review cycles.",
-              "A documented test suite published alongside the methodology notes, so IR offices can audit the calculations directly.",
+              "Additional methods (e.g. proportionality index, 80% rule) behind the same import and results experience.",
+              "Publishing the validation test suite alongside the methodology notes, so anyone can audit the calculations.",
             ],
           },
         ],
@@ -1051,7 +1059,7 @@ HAVING COUNT(*) >= MAX(req.total_required);`,
           },
           {
             type: "p",
-            text: "Soft Mode isn't a feature-reduced 'lite' version. Same data, same signals, same workflow. What changes is the voice: 'Open Briefing' becomes 'Open calm idea list,' 'Open Retail Pulse' becomes 'Show retail chatter,' and every module explains what it's for and what to click next instead of assuming you already know. It's the same design conviction behind the Equity Gap Calculator's simple and technical result modes. Expertise should live in the analysis, not in the vocabulary barrier. Both modes are in the public demo, so try the toggle.",
+            text: "Soft Mode isn't a feature-reduced 'lite' version. Same data, same signals, same workflow. What changes is the voice: 'Open Briefing' becomes 'Open calm idea list,' 'Open Retail Pulse' becomes 'Show retail chatter,' and every module explains what it's for and what to click next instead of assuming you already know. It's the same design conviction behind DI Calculator's simple and technical result modes. Expertise should live in the analysis, not in the vocabulary barrier. Both modes are in the public demo, so try the toggle.",
           },
         ],
       },

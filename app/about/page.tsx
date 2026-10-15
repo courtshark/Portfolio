@@ -49,8 +49,8 @@ export default function AboutPage() {
             models, scraped public program requirements to find students already eligible for
             certificates, and ran compliance data workflows. At Orange Coast College, as a Senior
             Research Analyst, I automate institutional processes, build dashboards leadership
-            actually uses, and translate methodology into decisions. The Equity Gap Calculator, a
-            live public tool implementing the state&rsquo;s disproportionate-impact methodology, is
+            actually uses, and translate methodology into decisions. DI Calculator, an independent
+            browser-based tool implementing the California Community Colleges PPG-1 methodology, is
             that whole career in miniature: statistics, product thinking, and translation, shipped.
           </p>
           <p>

@@ -31,7 +31,7 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="/projects">View My Work</ButtonLink>
             <ButtonLink href={site.flagshipUrl} variant="secondary" external>
-              Explore the Equity Gap Calculator
+              Explore DI Calculator
             </ButtonLink>
           </div>
           <div className="mt-6 space-y-1 text-sm text-faint">
@@ -64,13 +64,13 @@ export default function Home() {
                 {flagshipProject.title}
               </h2>
               <p className="mt-4 max-w-xl leading-relaxed text-muted">
-                A live decision-support application that helps higher-education practitioners find and
-                interpret equity gaps without hand-calculating statistical thresholds. Built on the
-                California Community Colleges PPG-1 methodology, with automated thresholding,
-                insufficient-data handling, and gap-closing estimates.
+                A browser-based tool for PPG-1 disproportionate impact analysis in California
+                Community Colleges. It turns the Chancellor&rsquo;s Office methodology into results
+                practitioners can read and researchers can verify, with privacy protections on every
+                exported report and all processing in the browser.
               </p>
               <ul className="mt-6 flex flex-wrap gap-2" aria-label="Key capabilities">
-                {["Live Product", "Statistical Methodology", "Data Import", "Interactive Analysis"].map(
+                {["PPG-1 Analysis", "Privacy by Design", "Browser-Based", "Public Demo"].map(
                   (item) => (
                     <li key={item}>
                       <Tag tone="accent">{item}</Tag>
@@ -80,7 +80,10 @@ export default function Home() {
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink href={site.flagshipUrl} external>
-                  Launch Live Application
+                  Visit DI Calculator
+                </ButtonLink>
+                <ButtonLink href={site.demoUrl} variant="secondary" external>
+                  Try the Public Demo
                 </ButtonLink>
                 <ButtonLink href={`/projects/${flagshipProject.slug}`} variant="secondary">
                   View Case Study
