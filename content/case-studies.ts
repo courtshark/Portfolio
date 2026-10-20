@@ -251,7 +251,7 @@ function classify(group: GroupResult, moe: number): Status {
         blocks: [
           {
             type: "p",
-            text: "DI Calculator is live at di-calculator.com, with a public demo at demo.di-calculator.com that uses synthetic data. It performs the PPG-1 disproportionate impact calculation in the browser, applies privacy protections to every published report, and is backed by 358 automated tests. Colleges and districts can contact me about pilots and institutional use. It stands as the clearest public demonstration of what I do: take a method buried in policy documents and manual process, and turn it into a system people can actually use.",
+            text: "DI Calculator is live at di-calculator.com, with a public demo at demo.di-calculator.com that uses synthetic data. It performs the PPG-1 disproportionate impact calculation in the browser, applies privacy protections to every published report, and is backed by 358 automated tests. Colleges and districts can contact me at cyoungberg@di-calculator.com about pilots and institutional use. It stands as the clearest public demonstration of what I do: take a method buried in policy documents and manual process, and turn it into a system people can actually use.",
           },
         ],
       },
